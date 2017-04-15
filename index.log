@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.11.22)  11 FEB 2017 22:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.3.6)  15 APR 2017 17:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6,7 +6,7 @@ entering extended mode
 (./index.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
-(/usr/local/share/texmf/tex/latex/abntex2/abntex2.cls
+(/usr/share/texlive/texmf-dist/tex/latex/abntex2/abntex2.cls
 Document Class: abntex2 2016/02/26 v-1.9.6 abnTeX2
 (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
@@ -1004,10 +1004,10 @@ Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/backref.sty
 Package: backref 2012/07/25 v1.38 Bibliographical back referencing
 )
-(/usr/local/share/texmf/tex/latex/abntex2/abntex2cite.sty
+(/usr/share/texlive/texmf-dist/tex/latex/abntex2/abntex2cite.sty
 Package: abntex2cite 2016/02/26 v-1.9.6 abnTeX2
 
-(/usr/local/share/texmf/tex/latex/abntex2/abntex2abrev.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/abntex2/abntex2abrev.sty)
 \minimumbiblabelwidth=\skip264
 \ABCIauxlen=\skip265
 \c@ABCIaux=\count171
@@ -1021,44 +1021,37 @@ LaTeX Info: Redefining \newblock on input line 591.
 LaTeX Info: Redefining \cite on input line 618.
 \ABCItoken=\toks29
 )
-Package color Info: Redefining color blue on input line 122.
-Package hyperref Info: Option `colorlinks' set `true' on input line 139.
+Package color Info: Redefining color blue on input line 124.
+Package hyperref Info: Option `colorlinks' set `true' on input line 141.
 \index@idxfile=\write4
 \openout4 = `index.idx'.
 
 
 Writing index file index.idx 
-(./index.aux (./pre-textuais/fichacatalografica.aux) (./pre-textuais/errata.aux
-) (./pre-textuais/folhaaprovacao.aux) (./pre-textuais/dedicatoria.aux)
-(./pre-textuais/agradecimentos.aux) (./pre-textuais/epigrafe.aux)
-(./pre-textuais/resumo/pt_Br.aux) (./pre-textuais/resumo/en.aux)
-(./pre-textuais/lista-ilustracoes.aux) (./pre-textuais/lista-tabelas.aux)
-(./pre-textuais/lista-abreviaturas-siglas.aux)
-(./pre-textuais/lista-simbolos.aux) (./pre-textuais/sumario.aux)
-(./textuais/introducao.aux) (./textuais/capitulos/capitulo1.aux))
+(./index.aux (./textuais/capitulos/capitulo1.aux))
 \openout1 = `index.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Try loading font information for T1+phv on input line 162.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 164.
+LaTeX Font Info:    ... okay on input line 164.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 164.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 \AtBeginShipoutBox=\box30
-Package hyperref Info: Link coloring ON on input line 162.
+Package hyperref Info: Link coloring ON on input line 164.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -1070,18 +1063,18 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 Redoing nameref's sectioning
 Redoing nameref's label
-LaTeX Info: Redefining \nameref on input line 162.
-LaTeX Info: Redefining \ref on input line 162.
-LaTeX Info: Redefining \pageref on input line 162.
-LaTeX Info: Redefining \nameref on input line 162.
-LaTeX Info: Redefining \degres on input line 162.
-LaTeX Info: Redefining \dots on input line 162.
-LaTeX Info: Redefining \up on input line 162.
+LaTeX Info: Redefining \nameref on input line 164.
+LaTeX Info: Redefining \ref on input line 164.
+LaTeX Info: Redefining \pageref on input line 164.
+LaTeX Info: Redefining \nameref on input line 164.
+LaTeX Info: Redefining \degres on input line 164.
+LaTeX Info: Redefining \dots on input line 164.
+LaTeX Info: Redefining \up on input line 164.
 \myptabbox=\box31
 \myptabboxwidth=\skip267
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 162.
+(lastpage)             ! on input line 164.
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count174
@@ -1110,7 +1103,7 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Redefining \microtypecontext on input line 162.
+LaTeX Info: Redefining \microtypecontext on input line 164.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1124,367 +1117,62 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `phv' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 179.
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 179.
 
-[1
+<imagens/facensLogo.jpg, id=4, 264.0264pt x 68.6565pt>
+File: imagens/facensLogo.jpg Graphic file (type jpg)
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
-
-]
+<use imagens/facensLogo.jpg>
+Package pdftex.def Info: imagens/facensLogo.jpg used on input line 181.
+(pdftex.def)             Requested size: 218.83566pt x 56.9055pt.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <16> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 181.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 188.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 188.
-
-
-(/usr/share/texmf/tex/latex/lm/ot1lmr.fd
-File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-(/usr/share/texlive/texmf-dist/tex/latex/microtype/mt-cmr.cfg
-File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
-(RS)
-)
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 188.
-
-
-(/usr/share/texmf/tex/latex/lm/omllmm.fd
-File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 188
-.
-
-(/usr/share/texmf/tex/latex/lm/omslmsy.fd
-File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 188
-.
-
-(/usr/share/texmf/tex/latex/lm/omxlmex.fd
-File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 188.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 188.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 188.
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.188 
-       [1
-
-
-]
-\openout2 = `pre-textuais/fichacatalografica.aux'.
-
- (./pre-textuais/fichacatalografica.tex
-Underfull \hbox (badness 10000) in paragraph at lines 29--29
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--29
-
- []
-
-
-Overfull \hbox (16.54776pt too wide) in paragraph at lines 29--29
-[]  [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 29--29
-
- []
-
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 29.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 29.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 29.
-)pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.204 \include{pre-textuais/fichacatalografica}
-                                                [2
-
-]
-\openout2 = `pre-textuais/errata.aux'.
-
- (./pre-textuais/errata.tex
-
-LaTeX Warning: Citation `NBR14724:2011' on page 3 undefined on input line 2.
-
-LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <10> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 17.
-[3
-
-
-
-] [4
-
-])
-\openout2 = `pre-textuais/folhaaprovacao.aux'.
-
- (./pre-textuais/folhaaprovacao.tex [5
-
-
-
-] [6
-
-])
-\openout2 = `pre-textuais/dedicatoria.aux'.
-
-
-(./pre-textuais/dedicatoria.tex
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 6.
- [7
-
-
-] [8
-
-])
-\openout2 = `pre-textuais/agradecimentos.aux'.
-
- (./pre-textuais/agradecimentos.tex
-[9
-
-
-
-] [10
-
-])
-\openout2 = `pre-textuais/epigrafe.aux'.
-
- (./pre-textuais/epigrafe.tex [11
-
-
-] [12
-
-])
-\openout2 = `pre-textuais/resumo/pt_Br.aux'.
-
-
-(./pre-textuais/resumo/pt_Br.tex
-
-LaTeX Warning: Citation `NBR6028:2003' on page 13 undefined on input line 3.
-
-[13
-
-
-] [14
-
-])
-\openout2 = `pre-textuais/resumo/en.aux'.
-
- (./pre-textuais/resumo/en.tex [15
-
-
-] [16
-
-])
-\openout2 = `pre-textuais/lista-ilustracoes.aux'.
-
-
-(./pre-textuais/lista-ilustracoes.tex (./index.lof) [17
-
-
-] [18
-
-])
-\openout2 = `pre-textuais/lista-tabelas.aux'.
-
-
-(./pre-textuais/lista-tabelas.tex (./index.lot) [19
-
-
-] [20
-
-])
-\openout2 = `pre-textuais/lista-abreviaturas-siglas.aux'.
-
-
-(./pre-textuais/lista-abreviaturas-siglas.tex [21
-
-
-
-] [22
-
-])
-\openout2 = `pre-textuais/lista-simbolos.aux'.
-
-
-(./pre-textuais/lista-simbolos.tex [23
-
-
-
-] [24
-
-])
-\openout2 = `pre-textuais/sumario.aux'.
-
- (./pre-textuais/sumario.tex
-(./index.toc
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 181.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 16.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 16.
-) [25
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 181.
+ [1
 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./imagens/facensLogo.jpg>]
+ [2
 
-] [26
-
-])
-\openout2 = `textuais/introducao.aux'.
-
- (./textuais/introducao.tex
-
-LaTeX Warning: Citation `abntex2classe' on page 27 undefined on input line 14.
-
-
-LaTeX Warning: Citation `abntex2-wiki-como-customizar' on page 27 undefined on 
-input line 29.
-
-
-LaTeX Warning: Citation `abntex2classe' on page 27 undefined on input line 32.
-
-
-LaTeX Warning: Citation `abntex2cite' on page 27 undefined on input line 32.
-
-
-LaTeX Warning: Citation `abntex2cite-alf' on page 27 undefined on input line 32
-.
-
-
-LaTeX Warning: Citation `memoir' on page 27 undefined on input line 33.
-
-) [27
-
-
-
-] [28
-
-
-] [29] [30]
+]
 \openout2 = `textuais/capitulos/capitulo1.aux'.
 
- (./textuais/capitulos/capitulo1.tex) [31
+ (./textuais/capitulos/capitulo1.tex)pdfTeX warning (ext4): destination with th
+e same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.322 \include{textuais/capitulos/capitulo1}
+                                             [1
 
 
-] [32
-
-
-] [33]
-\openout2 = `textuais/conclusao.aux'.
-
-
-(./textuais/conclusao.tex [34
-
-
-]) [35]
-No file index.bbl.
-[36
-
-
-]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\uppercase' on input line 378.
-
-[37
-
-] [38] [39
-
-] [40
-
-] [41] [42
-
-]
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\uppercase' on input line 406.
-
-[43
-
-] [44] [45
-
-] [46
-
-] [47] [48
 
 ]
 No file index.ind.
 
 AED: lastpage setting LastPage
-[49]
-\tf@lof=\write5
-\openout5 = `index.lof'.
-
-\tf@lot=\write6
-\openout6 = `index.lot'.
-
-\tf@toc=\write7
-\openout7 = `index.toc'.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 434.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 434.
- (./index.aux (./pre-textuais/fichacatalografica.aux)
-(./pre-textuais/errata.aux) (./pre-textuais/folhaaprovacao.aux)
-(./pre-textuais/dedicatoria.aux) (./pre-textuais/agradecimentos.aux)
-(./pre-textuais/epigrafe.aux) (./pre-textuais/resumo/pt_Br.aux)
-(./pre-textuais/resumo/en.aux) (./pre-textuais/lista-ilustracoes.aux)
-(./pre-textuais/lista-tabelas.aux)
-(./pre-textuais/lista-abreviaturas-siglas.aux)
-(./pre-textuais/lista-simbolos.aux) (./pre-textuais/sumario.aux)
-(./textuais/introducao.aux) (./textuais/capitulos/capitulo1.aux)
-(./textuais/conclusao.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 434.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 434.
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 434.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 436.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 436.
+(./index.aux (./textuais/capitulos/capitulo1.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 436.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 436.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 436.
  ) 
 Here is how much of TeX's memory you used:
- 14200 strings out of 493029
- 210989 string characters out of 6136233
- 474435 words of memory out of 5000000
- 17163 multiletter control sequences out of 15000+600000
- 76915 words of font info for 164 fonts, out of 8000000 for 9000
+ 13583 strings out of 493029
+ 200069 string characters out of 6136235
+ 457118 words of memory out of 5000000
+ 16890 multiletter control sequences out of 15000+600000
+ 30657 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,12n,36p,374b,529s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{chapter.4} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{section.3.1} has been referenced but does not exist
-, replaced by a fixed one
-
-pdfTeX warning (dest): name{page.51} has been referenced but does not exist, re
-placed by a fixed one
-
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/
-dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/sha
-re/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf/fonts/type1
-/public/lm/lmmi12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/s
-hare/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/
-helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhv
-ro8a.pfb>
-Output written on index.pdf (51 pages, 90998 bytes).
+ 39i,12n,36p,244b,516s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/urw/helvetic/uhvr8a.pfb>
+Output written on index.pdf (3 pages, 59052 bytes).
 PDF statistics:
- 446 PDF objects out of 1000 (max. 8388607)
- 383 compressed objects within 4 object streams
- 103 named destinations out of 1000 (max. 500000)
- 33497 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 39 PDF objects out of 1000 (max. 8388607)
+ 30 compressed objects within 1 object stream
+ 5 named destinations out of 1000 (max. 500000)
+ 15382 words of extra memory for PDF output out of 17280 (max. 10000000)
 

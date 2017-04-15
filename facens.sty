@@ -27,27 +27,58 @@
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
 
+% ---
+% TAMANHO DE FONTES
+% ---
+% Opções com o tamanho definido como 12pt na classe principal
+% \tiny - 6pt
+% \scriptsize - 8pt
+% \footnotesize - 10pt
+% \small - 11pt
+% \normalzize - 12pt
+% \large - 14pt
+% \Large - 17pt
+% \LARGE - 20pt
+% \huge - 25pt
+% \Huge - 25pt
+
+
+
 % alterando a capa
 \renewcommand{\imprimircapa}{%
   \begin{capa}%
     \center
-    \ABNTEXchapterfont\Large UNIVERSIDADE QUE TORNA OS DOCUMENTOS AINDA MAIS ESTRANHOS
+    
+    %logo Facens
+    \begin{figure}
+    	\centering
+    	\includegraphics[height=2cm]{facensLogo}
+  	\end{figure}
+  	
+  	%Coordenadoria de ... fonte 16 - feita uma pequena gambiarra pois por padrão este tamanho não é disponivel
+  	{\fontsize{16}{20}\MakeUppercase\ABNTEXchapterfont\textbf{COORDENADORIA DE ENGENHARIA DA COMPUTAÇÃO}}
 
-    \vspace*{1cm}
-
-    {\ABNTEXchapterfont\large\imprimirautor}
-
+    %espaço
     \vfill
-    \begin{center}
-    \ABNTEXchapterfont\bfseries\LARGE\imprimirtitulo
-    \end{center}
+
+	%impressão dos autores em negrito e caixa alta
+    {\large\MakeUppercase\imprimirautor}
+	
+	%espaço
+    \vfill
+    
+    %titulo do trabalho
+    \center\ABNTEXchapterfont\bfseries\large\MakeUppercase\imprimirtitulo
+
+	%espaço
     \vfill
 
+	%impressão do local
     \large\imprimirlocal
 
+	%impressão da data
     \large\imprimirdata
-
-    \vspace*{1cm}
+    
   \end{capa}
 }
 

@@ -35,10 +35,10 @@
 	twoside,			% para impressão em recto e verso. Oposto a oneside
 	a4paper,			% tamanho do papel. 
 	% -- opções da classe abntex2 --
-	%chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
-	%section=TITLE,		% títulos de seções convertidos em letras maiúsculas
-	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
-	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
+	chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
+	section=TITLE,		% títulos de seções convertidos em letras maiúsculas
+	subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
+	subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
 	% -- opções do pacote babel --
 	english,			% idioma adicional para hifenização
 	french,				% idioma adicional para hifenização
@@ -57,9 +57,15 @@
 \usepackage{color}				% Controle das cores
 \usepackage{graphicx}			% Inclusão de gráficos
 \usepackage{microtype} 			% para melhorias de justificação
-\usepackage{facens}
+\usepackage{facens}				% inclusão do pacote de modificações para o padrão Facens
 % ---
-		
+
+% ---
+% Indicando pasta de figuras\\
+% ---
+\graphicspath{{imagens/}}
+% ---
+
 % ---
 % Pacotes adicionais, usados apenas no âmbito do Modelo Canônico do abnteX2
 % ---
@@ -96,18 +102,14 @@
 % ---
 % Informações de dados para CAPA e FOLHA DE ROSTO
 % ---
-\titulo{Desenvolvimento de template\\ para Trabalho Acadêmico com LaTeX}
-\autor{Alex Covolan Vieira Coelho}
-\local{Brasil}
-\data{12/12/2017}
-\orientador{Lauro César Araujo}
-\instituicao{%
-  Faculdade de Engenharia de Sorocaba - FACENS
-  \par
-  Faculdade de Arquitetura da Informação
-  \par
-  Programa de Pós-Graduação}
-\tipotrabalho{Tese (Doutorado)}
+\titulo{Sistema de IoT Para Urgências no Trânsito}
+\autor{Alex Covolan Vieira Coelho \\ Gabriel Giovanini de Souza}
+\local{Sorocaba/SP}
+\data{2017}
+\orientador[Me.]{Andreia Damasio de Leles}
+\instituicao{Faculdade de Engenharia de Sorocaba - FACENS}
+\tipotrabalho{Monografia}
+
 % O preambulo deve conter o tipo do trabalho, o objetivo, 
 % o nome da instituição e a área de concentração 
 \preambulo{Modelo canônico de trabalho monográfico acadêmico em conformidade com
@@ -171,7 +173,7 @@ as normas ABNT apresentado à comunidade de usuários \LaTeX.}
 % ----------------------------------------------------------
 % ELEMENTOS PRÉ-TEXTUAIS
 % ----------------------------------------------------------
-% \pretextual
+\pretextual
 
 % ---
 % Capa
@@ -183,7 +185,7 @@ as normas ABNT apresentado à comunidade de usuários \LaTeX.}
 % Folha de rosto
 % (o * indica que haverá a ficha bibliográfica)
 % ---
-\imprimirfolhaderosto*
+%\imprimirfolhaderosto*
 % ---
 
 % ---
@@ -201,13 +203,13 @@ as normas ABNT apresentado à comunidade de usuários \LaTeX.}
 %     \includepdf{fig_ficha_catalografica.pdf}
 % \end{fichacatalografica}
 
-\include{pre-textuais/fichacatalografica}
+%\include{pre-textuais/fichacatalografica}
 % ---
 
 % ---
 % Inserir errata
 % ---
-\include{pre-textuais/errata}
+%\include{pre-textuais/errata}
 % ---
 
 % ---
@@ -221,25 +223,25 @@ as normas ABNT apresentado à comunidade de usuários \LaTeX.}
 %
 % \includepdf{folhadeaprovacao_final.pdf}
 %
-\include{pre-textuais/folhaaprovacao}
+%\include{pre-textuais/folhaaprovacao}
 % ---
 
 % ---
 % Dedicatória
 % ---
-\include{pre-textuais/dedicatoria}
+%\include{pre-textuais/dedicatoria}
 % ---
 
 % ---
 % Agradecimentos
 % ---
-\include{pre-textuais/agradecimentos}
+%\include{pre-textuais/agradecimentos}
 % ---
 
 % ---
 % Epígrafe
 % ---
-\include{pre-textuais/epigrafe}
+%\include{pre-textuais/epigrafe}
 % ---
 
 % ---
@@ -247,41 +249,41 @@ as normas ABNT apresentado à comunidade de usuários \LaTeX.}
 % ---
 
 % resumo em português
-\include{pre-textuais/resumo/pt_Br}
+%\include{pre-textuais/resumo/pt_Br}
 
 % resumo em inglês
-\include{pre-textuais/resumo/en}
+%\include{pre-textuais/resumo/en}
 
 % ---
 
 % ---
 % inserir lista de ilustrações
 % ---
-\include{pre-textuais/lista-ilustracoes}
+%\include{pre-textuais/lista-ilustracoes}
 % ---
 
 % ---
 % inserir lista de tabelas
 % ---
-\include{pre-textuais/lista-tabelas}
+%\include{pre-textuais/lista-tabelas}
 % ---
 
 % ---
 % inserir lista de abreviaturas e siglas
 % ---
-\include{pre-textuais/lista-abreviaturas-siglas}
+%\include{pre-textuais/lista-abreviaturas-siglas}
 % ---
 
 % ---
 % inserir lista de símbolos
 % ---
-\include{pre-textuais/lista-simbolos}
+%\include{pre-textuais/lista-simbolos}
 % ---
 
 % ---
 % inserir o sumario
 % ---
-\include{pre-textuais/sumario}
+%\include{pre-textuais/sumario}
 % ---
 
 
@@ -294,7 +296,7 @@ as normas ABNT apresentado à comunidade de usuários \LaTeX.}
 % ----------------------------------------------------------
 % Introdução (exemplo de capítulo sem numeração, mas presente no Sumário)
 % ----------------------------------------------------------
-\include{textuais/introducao}
+%\include{textuais/introducao}
 % ----------------------------------------------------------
 % PARTE
 % ----------------------------------------------------------
@@ -311,7 +313,7 @@ as normas ABNT apresentado à comunidade de usuários \LaTeX.}
 % ----------------------------------------------------------
 % PARTE
 % ----------------------------------------------------------
-\part{Parte de teste}
+%\part{Parte de teste}
 % ----------------------------------------------------------
 
 % ---
@@ -323,15 +325,15 @@ as normas ABNT apresentado à comunidade de usuários \LaTeX.}
 % ---
 % segundo capitulo de Resultados
 % ---
-\chapter{Nam sed tellus sit amet lectus urna ullamcorper tristique interdum
-elementum}
+%\chapter{Nam sed tellus sit amet lectus urna ullamcorper tristique interdum
+%elementum}
 % ---
 
 % ---
-\section{Pellentesque sit amet pede ac sem eleifend consectetuer}
+%\section{Pellentesque sit amet pede ac sem eleifend consectetuer}
 % ---
 
-\lipsum[24]
+%\lipsum[24]
 
 % ----------------------------------------------------------
 % Finaliza a parte no bookmark do PDF
@@ -343,7 +345,7 @@ elementum}
 % ---
 % Conclusão
 % ---
-\include{textuais/conclusao}
+%\include{textuais/conclusao}
 
 % ----------------------------------------------------------
 % ELEMENTOS PÓS-TEXTUAIS
@@ -354,7 +356,7 @@ elementum}
 % ----------------------------------------------------------
 % Referências bibliográficas
 % ----------------------------------------------------------
-\bibliography{abntex2-modelo-references}
+%\bibliography{abntex2-modelo-references}
 
 % ----------------------------------------------------------
 % Glossário
@@ -371,24 +373,24 @@ elementum}
 % ---
 % Inicia os apêndices
 % ---
-\begin{apendicesenv}
+%\begin{apendicesenv}
 
 % Imprime uma página indicando o início dos apêndices
-\partapendices
+%\partapendices
 
 % ----------------------------------------------------------
-\chapter{Quisque libero justo}
+%\chapter{Quisque libero justo}
 % ----------------------------------------------------------
 
-\lipsum[50]
+%\lipsum[50]
 
 % ----------------------------------------------------------
-\chapter{Nullam elementum urna vel imperdiet sodales elit ipsum pharetra ligula
-ac pretium ante justo a nulla curabitur tristique arcu eu metus}
+%chapter{Nullam elementum urna vel imperdiet sodales elit ipsum pharetra ligula
+%ac pretium ante justo a nulla curabitur tristique arcu eu metus}
 % ----------------------------------------------------------
-\lipsum[55-57]
+%\lipsum[55-57]
 
-\end{apendicesenv}
+%\end{apendicesenv}
 % ---
 
 
@@ -399,35 +401,35 @@ ac pretium ante justo a nulla curabitur tristique arcu eu metus}
 % ---
 % Inicia os anexos
 % ---
-\begin{anexosenv}
+%\begin{anexosenv}
 
 % Imprime uma página indicando o início dos anexos
-\partanexos
+%\partanexos
 
 % ---
-\chapter{Morbi ultrices rutrum lorem.}
+%\chapter{Morbi ultrices rutrum lorem.}
 % ---
-\lipsum[30]
+%\lipsum[30]
 
 % ---
-\chapter{Cras non urna sed feugiat cum sociis natoque penatibus et magnis dis
-parturient montes nascetur ridiculus mus}
+%\chapter{Cras non urna sed feugiat cum sociis natoque penatibus et magnis dis
+%parturient montes nascetur ridiculus mus}
 % ---
 
-\lipsum[31]
+%\lipsum[31]
 
 % ---
-\chapter{Fusce facilisis lacinia dui}
+%\chapter{Fusce facilisis lacinia dui}
 % ---
 
-\lipsum[32]
+%\lipsum[32]
 
-\end{anexosenv}
+%\end{anexosenv}
 
 %---------------------------------------------------------------------
 % INDICE REMISSIVO
 %---------------------------------------------------------------------
-\phantompart
+%\phantompart
 \printindex
 %---------------------------------------------------------------------
 
