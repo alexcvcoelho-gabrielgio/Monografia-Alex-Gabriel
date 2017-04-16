@@ -32,7 +32,8 @@
 	% -- opções da classe memoir --
 	12pt,				% tamanho da fonte
 	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
-	twoside,			% para impressão em recto e verso. Oposto a oneside
+	%twoside,			% para impressão em recto e verso. Oposto a oneside
+	oneside,			% impressão de um lado só
 	a4paper,			% tamanho do papel. 
 	% -- opções da classe abntex2 --
 	chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
@@ -108,12 +109,12 @@
 \data{2017}
 \orientador[Me.]{Andreia Damasio de Leles}
 \instituicao{Faculdade de Engenharia de Sorocaba - FACENS}
-\tipotrabalho{Monografia}
+\tipotrabalho{Dissertação}
 
 % O preambulo deve conter o tipo do trabalho, o objetivo, 
 % o nome da instituição e a área de concentração 
-\preambulo{Modelo canônico de trabalho monográfico acadêmico em conformidade com
-as normas ABNT apresentado à comunidade de usuários \LaTeX.}
+\preambulo{Trabalho de conclusão de curso apresentado à Faculdade de Engenharia de Sorocaba como
+exigência parcial para a obtenção do diploma de graduação em Engenharia da Computação.}
 % ---
 
 
@@ -147,7 +148,7 @@ as normas ABNT apresentado à comunidade de usuários \LaTeX.}
 % --- 
 
 % O tamanho do parágrafo é dado por:
-\setlength{\parindent}{1.3cm}
+\setlength{\parindent}{1.25cm}
 
 % Controle do espaçamento entre um parágrafo e outro:
 \setlength{\parskip}{0.2cm}  % tente também \onelineskip
@@ -185,7 +186,7 @@ as normas ABNT apresentado à comunidade de usuários \LaTeX.}
 % Folha de rosto
 % (o * indica que haverá a ficha bibliográfica)
 % ---
-%\imprimirfolhaderosto*
+\imprimirfolhaderosto*
 % ---
 
 % ---
@@ -283,7 +284,7 @@ as normas ABNT apresentado à comunidade de usuários \LaTeX.}
 % ---
 % inserir o sumario
 % ---
-%\include{pre-textuais/sumario}
+\include{pre-textuais/sumario}
 % ---
 
 
@@ -291,7 +292,7 @@ as normas ABNT apresentado à comunidade de usuários \LaTeX.}
 % ----------------------------------------------------------
 % ELEMENTOS TEXTUAIS
 % ----------------------------------------------------------
-\textual
+%\textual
 
 % ----------------------------------------------------------
 % Introdução (exemplo de capítulo sem numeração, mas presente no Sumário)

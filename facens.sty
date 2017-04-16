@@ -41,7 +41,9 @@
 % \LARGE - 20pt
 % \huge - 25pt
 % \Huge - 25pt
-
+\renewcommand{\ABNTEXchapterfontsize}{\large\bfseries}
+\renewcommand{\ABNTEXsectionfontsize}{\normalsize}
+\renewcommand{\ABNTEXsubsectionfontsize}{\normalsize}
 
 
 % alterando a capa
@@ -89,45 +91,33 @@
 
 \renewcommand{\folhaderostocontent}{
 \begin{center}
-{\ABNTEXchapterfont\Large UNIVERSIDADE QUE TORNA OS DOCUMENTOS AINDA MAIS ESTRANHOS}
+{\normalsize\textbf{\imprimirautor}}
 
-    \vspace*{1cm}
-
-{\ABNTEXchapterfont\large\imprimirautor}
 
 \vspace*{\fill}\vspace*{\fill}
 
 \begin{center}
-\ABNTEXchapterfont\bfseries\Large\imprimirtitulo
+\bfseries\large\MakeUppercase\imprimirtitulo
 \end{center}
 
 \vspace*{\fill}
 
 \abntex@ifnotempty{\imprimirpreambulo}{%
-  \hspace{.45\textwidth}
-  \begin{minipage}{.5\textwidth}
-  \SingleSpacing
-  \imprimirpreambulo
-  \end{minipage}%
+	\begin{OnehalfSpace}
+  		\hspace{.45\textwidth}
+  		\begin{minipage}{.5\textwidth}
+  			\imprimirpreambulo \\
+  			Orientador: \imprimirorientadorRotulo~\imprimirorientador
+  		\end{minipage}%
+  	\end{OnehalfSpace}
   \vspace*{\fill}
 }%
 
-{\large\imprimirorientadorRotulo~\imprimirorientador\par}
-
-\abntex@ifnotempty{\imprimircoorientador}{%
-  {\large\imprimircoorientadorRotulo~\imprimircoorientador}%
-}%
-
-\vspace*{\fill}
-
-{\abntex@ifnotempty{\imprimirinstituicao}{\imprimirinstituicao\vspace*{\fill}}}
-
-{\large\imprimirlocal}
+{\large\textbf\imprimirlocal}
 
 \par
 
-{\large\imprimirdata}
-\vspace*{1cm}
+{\large\textbf\imprimirdata}
 \end{center}
 }
 
