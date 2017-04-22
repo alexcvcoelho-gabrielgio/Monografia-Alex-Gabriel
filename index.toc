@@ -6,7 +6,8 @@
 \setlength {\cftchapterindent }{0em} \setlength {\cftchapternumwidth }{\cftlastnumwidth }
 \contentsline {chapter}{\chapternumberline {1}\MakeTextUppercase {Internet das Coisas Aplica\IeC {\c c}\IeC {\~o}es em Mobilidade Urbana e Sa\IeC {\'u}de}}{4}{chapter.1}
 \contentsline {section}{\numberline {1.1}O que \IeC {\'e} IoT?}{5}{section.1.1}
+\contentsline {section}{\numberline {1.2}Smart Cities}{7}{section.1.2}
 \vspace {\cftbeforechapterskip }
 \vspace {\cftbeforechapterskip }
 \setlength {\cftchapterindent }{\cftlastnumwidth } \setlength {\cftchapternumwidth }{2em}
-\contentsline {chapter}{\uppercase {Refer\^encias}}{6}{section*.7}
+\contentsline {chapter}{\uppercase {Refer\^encias}}{8}{section*.7}
