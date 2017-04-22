@@ -1,0 +1,19 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.6 }
+
+\bibitem[Presser et al. 2011]{presser2011}
+\abntrefinfo{Presser et al.}{PRESSER et al.}{2011}
+{PRESSER, M. et al. \textbf{Inspiring the Internet of Things: The Internet of
+  Things Comic Book}.
+Alexandra Institute, 2011.}
+
+\bibitem[Rangel 2015]{historiaiot}
+\abntrefinfo{Rangel}{RANGEL}{2015}
+{RANGEL, R. \textbf{Internet das Coisas, nova revolução da conectividade }.
+\emph{Inovação em Pauta}, v. 1, n.~18, p.~4--7, dez 2015.}
+
+\end{thebibliography}
