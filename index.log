@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.3.6)  24 APR 2017 18:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.3.6)  24 APR 2017 20:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1025,8 +1025,14 @@ LaTeX Warning: Unused global option(s):
 
 (./index.aux (./pre-textuais/lista-ilustracoes.aux)
 (./pre-textuais/lista-abreviaturas-siglas.aux) (./pre-textuais/sumario.aux)
-(./textuais/capitulos/capitulo1.aux) (./textuais/capitulos/capitulo2.aux)
-(./textuais/capitulos/capitulo3.aux) (./textuais/capitulos/capitulo4.aux)
+(./textuais/capitulos/capitulo1.aux) (./textuais/capitulos/capitulo2.aux
+
+LaTeX Warning: Label `sec:v2v' multiply defined.
+
+
+LaTeX Warning: Label `sec:v2i' multiply defined.
+
+) (./textuais/capitulos/capitulo3.aux) (./textuais/capitulos/capitulo4.aux)
 (./textuais/conclusao.aux))
 \openout1 = `index.aux'.
 
@@ -1224,7 +1230,7 @@ BANA
 \openout2 = `textuais/capitulos/capitulo1.aux'.
 
  (./textuais/capitulos/capitulo1.tex
-<imagens/graficoIot2011-2025.png, id=93, 450.18187pt x 282.30469pt>
+<imagens/graficoIot2011-2025.png, id=99, 450.18187pt x 282.30469pt>
 File: imagens/graficoIot2011-2025.png Graphic file (type png)
 
 <use imagens/graficoIot2011-2025.png>
@@ -1236,7 +1242,7 @@ Package pdftex.def Info: imagens/graficoIot2011-2025.png used on input line 8.
 
 
  <./imagens/graficoIot2011-2025.png>]
-<imagens/fluxogramaiot.png, id=109, 532.99126pt x 259.7203pt>
+<imagens/fluxogramaiot.png, id=115, 532.99126pt x 259.7203pt>
 File: imagens/fluxogramaiot.png Graphic file (type png)
 
 <use imagens/fluxogramaiot.png>
@@ -1245,14 +1251,14 @@ Package pdftex.def Info: imagens/fluxogramaiot.png used on input line 28.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 34.
  [6 <./imagens/fluxogramaiot.png>]
-<imagens/exemploemergenciasiot.png, id=124, 699.36281pt x 1057.70157pt>
+<imagens/exemploemergenciasiot.png, id=130, 699.36281pt x 1057.70157pt>
 File: imagens/exemploemergenciasiot.png Graphic file (type png)
 
 <use imagens/exemploemergenciasiot.png>
 Package pdftex.def Info: imagens/exemploemergenciasiot.png used on input line 4
 0.
 (pdftex.def)             Requested size: 279.74016pt x 423.07314pt.
- [7 <./imagens/exemploemergenciasiot.png>] <imagens/estruturaiot.jpg, id=137, 6
+ [7 <./imagens/exemploemergenciasiot.png>] <imagens/estruturaiot.jpg, id=143, 6
 52.76129pt x 355.91032pt>
 File: imagens/estruturaiot.jpg Graphic file (type jpg)
 
@@ -1260,7 +1266,7 @@ File: imagens/estruturaiot.jpg Graphic file (type jpg)
 Package pdftex.def Info: imagens/estruturaiot.jpg used on input line 50.
 (pdftex.def)             Requested size: 424.28981pt x 231.33896pt.
 
-<imagens/crescimentopopulacional.png, id=145, 931.48pt x 545.03625pt>
+<imagens/crescimentopopulacional.png, id=151, 931.48pt x 545.03625pt>
 File: imagens/crescimentopopulacional.png Graphic file (type png)
 
 <use imagens/crescimentopopulacional.png>
@@ -1279,11 +1285,14 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 Package hyperref Warning: Suppressing empty link on input line 75.
 
-) [9 <./imagens/crescimentopopulacional.png>]
+
+Package hyperref Warning: Suppressing empty link on input line 75.
+
+[9 <./imagens/crescimentopopulacional.png>]) [10]
 \openout2 = `textuais/capitulos/capitulo2.aux'.
 
 
-(./textuais/capitulos/capitulo2.tex) [10
+(./textuais/capitulos/capitulo2.tex) [11
 
 
 
@@ -1291,14 +1300,14 @@ Package hyperref Warning: Suppressing empty link on input line 75.
 \openout2 = `textuais/capitulos/capitulo3.aux'.
 
  (./textuais/capitulos/capitulo3.tex)
-[11
+[12
 
 
 
-] [12]
+] [13]
 \openout2 = `textuais/capitulos/capitulo4.aux'.
 
- (./textuais/capitulos/capitulo4.tex) [13
+ (./textuais/capitulos/capitulo4.tex) [14
 
 
 
@@ -1306,7 +1315,7 @@ Package hyperref Warning: Suppressing empty link on input line 75.
 \openout2 = `textuais/conclusao.aux'.
 
  (./textuais/conclusao.tex)
-[14
+[15
 
 
 
@@ -1324,7 +1333,7 @@ LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
 No file index.ind.
 
 AED: lastpage setting LastPage
-[15
+[16
 
 
 ]
@@ -1345,27 +1354,27 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 443.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 443.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 443.
  ) 
 Here is how much of TeX's memory you used:
- 13935 strings out of 493029
- 206656 string characters out of 6136235
- 464840 words of memory out of 5000000
- 17009 multiletter control sequences out of 15000+600000
- 50574 words of font info for 136 fonts, out of 8000000 for 9000
+ 13955 strings out of 493029
+ 206943 string characters out of 6136235
+ 466114 words of memory out of 5000000
+ 17018 multiletter control sequences out of 15000+600000
+ 50824 words of font info for 140 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,12n,36p,883b,516s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,12n,36p,905b,516s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvet
 ic/uhvro8a.pfb>
-Output written on index.pdf (16 pages, 1670495 bytes).
+Output written on index.pdf (17 pages, 1673497 bytes).
 PDF statistics:
- 310 PDF objects out of 1000 (max. 8388607)
- 271 compressed objects within 3 object streams
- 61 named destinations out of 1000 (max. 500000)
- 26351 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 337 PDF objects out of 1000 (max. 8388607)
+ 297 compressed objects within 3 object streams
+ 66 named destinations out of 1000 (max. 500000)
+ 26375 words of extra memory for PDF output out of 29859 (max. 10000000)
 

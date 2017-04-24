@@ -22,7 +22,9 @@ Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Database file #1: abntex2-options.bib
 Database file #2: pos-textuais/bibliografia.bib
 Warning--entry type for "smartcities2017" isn't style-file defined
---line 54 of file pos-textuais/bibliografia.bib
+--line 66 of file pos-textuais/bibliografia.bib
+Warning--entry type for "convergenciadigital" isn't style-file defined
+--line 75 of file pos-textuais/bibliografia.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
@@ -33,45 +35,45 @@ Warning--campo year vazio em gonccalomodelo
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 9 entries,
+You've used 10 entries,
             6714 wiz_defined-function locations,
-            1251 strings with 11006 characters,
-and the built_in function-call counts, 7989 in all, are:
-= -- 822
-> -- 175
-< -- 112
-+ -- 209
-- -- 54
-* -- 501
-:= -- 1116
-add.period$ -- 26
-call.type$ -- 9
-change.case$ -- 70
-chr.to.int$ -- 18
-cite$ -- 9
-duplicate$ -- 569
-empty$ -- 466
-format.name$ -- 260
-if$ -- 1720
+            1256 strings with 11221 characters,
+and the built_in function-call counts, 10949 in all, are:
+= -- 1240
+> -- 190
+< -- 236
++ -- 338
+- -- 59
+* -- 661
+:= -- 1454
+add.period$ -- 31
+call.type$ -- 10
+change.case$ -- 77
+chr.to.int$ -- 19
+cite$ -- 10
+duplicate$ -- 968
+empty$ -- 524
+format.name$ -- 283
+if$ -- 2239
 int.to.chr$ -- 0
 int.to.str$ -- 0
-missing$ -- 146
-newline$ -- 48
-num.names$ -- 40
-pop$ -- 194
+missing$ -- 163
+newline$ -- 54
+num.names$ -- 45
+pop$ -- 217
 preamble$ -- 1
-purify$ -- 31
+purify$ -- 34
 quote$ -- 0
-skip$ -- 671
+skip$ -- 1073
 stack$ -- 1
-substring$ -- 305
-swap$ -- 219
-text.length$ -- 9
+substring$ -- 448
+swap$ -- 354
+text.length$ -- 10
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 2
 warning$ -- 1
-while$ -- 55
+while$ -- 62
 width$ -- 0
-write$ -- 130
-(There were 2 warnings)
+write$ -- 145
+(There were 3 warnings)
