@@ -5,6 +5,23 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{v-1.9.6 }
 
+\bibitem[Depiné 2016]{revistavia}
+\abntrefinfo{Depiné}{DEPINé}{2016}
+{DEPINé Ágatha. \textbf{Smart Cities como cidades inteligentes geram cidades
+  sustentáveis}.
+\emph{VIA Revista}, v.~1, n. 1 Ano 1, p.~7, 2016.}
+
+\bibitem[Leite 2012]{leite2012cidades}
+\abntrefinfo{Leite}{LEITE}{2012}
+{LEITE, C. \emph{\textbf{Cidades inteligentes, Cidade Sustentáveis}}. [S.l.]:
+  Porto Alegre, Bookman, 2012.}
+
+\bibitem[Morelli 2013]{ihs2013}
+\abntrefinfo{Morelli}{MORELLI}{2013}
+{MORELLI, B. \emph{\textbf{Internet Connected Devices: Evolving from the
+  “Internet of Things” to the “Internet of Everything”}}. [S.l.]: SEMI
+  Texas Fall Outlook, 2013.}
+
 \bibitem[Presser et al. 2011]{presser2011}
 \abntrefinfo{Presser et al.}{PRESSER et al.}{2011}
 {PRESSER, M. et al. \textbf{Inspiring the Internet of Things: The Internet of
@@ -20,5 +37,13 @@ Alexandra Institute, 2011.}
 \abntrefinfo{Santaella et al.}{SANTAELLA et al.}{2013}
 {SANTAELLA, L. et al. \textbf{Desvelando a internet das coisas}.
 \emph{Revista GEMInIS}, v.~1, n. 2 Ano 4, p. 19--32, 2013.}
+
+\bibitem[Tratz-Ryan 2017]{smartcities2017}
+\abntrefinfo{Tratz-Ryan}{TRATZ-RYAN}{2017}
+{TRATZ-RYAN, B. \emph{\textbf{Tecnologias de IoT são peças-chave para
+  soluções de cidades inteligentes}}. 2017.
+Acesso 23 Abr. 2017.
+Dispon{\'\i}vel em:
+  \url{http://computerworld.com.br/tecnologias-de-iot-sao-pecas-chave-para-solucoes-de-cidades-inteligentes}.}
 
 \end{thebibliography}
