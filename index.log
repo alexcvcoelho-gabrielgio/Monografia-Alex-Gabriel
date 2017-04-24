@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.3.6)  23 APR 2017 23:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.3.6)  24 APR 2017 18:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1275,7 +1275,11 @@ Overfull \hbox (10.73886pt too wide) in paragraph at lines 62--63
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[8 <./imagens/estruturaiot.jpg>]) [9 <./imagens/crescimentopopulacional.png>]
+[8 <./imagens/estruturaiot.jpg>]
+
+Package hyperref Warning: Suppressing empty link on input line 75.
+
+) [9 <./imagens/crescimentopopulacional.png>]
 \openout2 = `textuais/capitulos/capitulo2.aux'.
 
 
@@ -1313,9 +1317,9 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 bibitemlist
 LaTeX Font Info:    Font shape `T1/phv/bx/it' in size <12> not available
-(Font)              Font shape `T1/phv/b/it' tried instead on input line 16.
+(Font)              Font shape `T1/phv/b/it' tried instead on input line 23.
 LaTeX Font Info:    Font shape `T1/phv/b/it' in size <12> not available
-(Font)              Font shape `T1/phv/b/sl' tried instead on input line 16.
+(Font)              Font shape `T1/phv/b/sl' tried instead on input line 23.
 )
 No file index.ind.
 
@@ -1346,22 +1350,22 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 443.
  ) 
 Here is how much of TeX's memory you used:
- 13923 strings out of 493029
- 206473 string characters out of 6136235
- 464668 words of memory out of 5000000
- 17004 multiletter control sequences out of 15000+600000
- 50198 words of font info for 132 fonts, out of 8000000 for 9000
+ 13935 strings out of 493029
+ 206656 string characters out of 6136235
+ 464840 words of memory out of 5000000
+ 17009 multiletter control sequences out of 15000+600000
+ 50574 words of font info for 136 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 39i,12n,36p,823b,516s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 39i,12n,36p,883b,516s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/urw/helvetic/uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvet
 ic/uhvro8a.pfb>
-Output written on index.pdf (16 pages, 1669315 bytes).
+Output written on index.pdf (16 pages, 1670495 bytes).
 PDF statistics:
- 307 PDF objects out of 1000 (max. 8388607)
- 268 compressed objects within 3 object streams
- 60 named destinations out of 1000 (max. 500000)
+ 310 PDF objects out of 1000 (max. 8388607)
+ 271 compressed objects within 3 object streams
+ 61 named destinations out of 1000 (max. 500000)
  26351 words of extra memory for PDF output out of 29859 (max. 10000000)
 
