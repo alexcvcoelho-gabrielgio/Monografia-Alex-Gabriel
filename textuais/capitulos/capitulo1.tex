@@ -7,7 +7,7 @@ Internet das coisas, conhecido também como IoT, sigla que em inglês significa 
 \begin{center}
 \includegraphics[scale=0.75]{graficoIot2011-2025}
 \end{center}
-\legend{Fonte: IHS 2013}
+\legend{Fonte: \citeauthor{ihs2013}, \citeyear{ihs2013}}
 \end{figure}
 
 Tais dados se devem as consequências geradas pela emergência de tecnologias microeletrônicas, \textit{wireless} (\textit{Wi-fi}, \textit{Bluetooth} e \textit{ZigBee}), interfaces de comunicação móveis que se somaram as fixas já existentes e devido a formação de uma grande rede ubíqua capaz de conectar seres humanos com uma grande facilidade, possibilitando assim fornecer toda a base para a formação da IoT. \cite{santaella2013} 
@@ -82,7 +82,7 @@ Na área da saúde um grande desafio a se vencer é a de confiabilidade nos dado
 
 \section{V2V}
 \label{sec:v2v}
-Veiculo para Veiculo, ou V2V, habilita carros se comunicarem entre eles em uma tentativa de avisar motoristas sobre potenciais acidentes ou batidas. A base da tecnologia e usar um onda de radio de baixo alcance para permitirem que os carros se comuniquem, e os carros enviam informações como localização, velocidade, direção, e também os estados dos freios, como mostra na figura.
+Veiculo para Veiculo, ou V2V, habilita carros a se comunicarem entre eles em uma tentativa de avisar motoristas sobre potenciais acidentes ou colisões. A base da tecnologia é usar um onda de rádio de baixo alcance para permitir que os carros se comuniquem, podendo também que os carros enviem informações como localização, velocidade, direção, e também os estados dos freios, como mostra na figura~\ref{figsimulacao}.
 
 
 
@@ -96,11 +96,21 @@ Veiculo para Veiculo, ou V2V, habilita carros se comunicarem entre eles em uma t
 
 \subsection{Regulamentação}
 \label{subsec:regulamentacao}
-Em dezembro de 2016 o Departamento de Transporte dos Estado Unidos (U.S. DOT) anunciou que esta trabalhando na regulamentação do uso da tecnologia em veículos de uso diário. O DOT diz que a tecnologia de radio tera um alcance de mais ou menos 300 metros, e oferece um alcance mais que as de um radar ou câmeras, em adição de não ser obstruídos por obstáculos ou outros veículos. O mesmo despertamento acredita que a tecnologia poderá ser utilizada para avisar veículos sobre perigos eminentes perticulamente quando se esta virando ou trocando de faixas. Adicionalmente, o departamento diz que o carros com sistemas automáticos de direção (ou ate mesmo carros completamentos autonomos) se beneficiaram das informações fornecidas pelo sistemas V2V.~\cite{usdot}
+Em dezembro de 2016 o Departamento de Transporte dos Estado Unidos (U.S. DOT) anunciou que esta trabalhando na regulamentação do uso da tecnologia em veículos de uso diário. O DOT diz que a tecnologia de rádio terá um alcance em média de 300 metros, e oferece um alcance maior que a abrangência de um radar ou câmera, em adição de não ser obstruídos por obstáculos ou outros veículos. O mesmo departamento acredita que a tecnologia poderá ser utilizada para avisar veículos sobre perigos eminentes particularmente quando se está em uma conversão ou realizando a troca de faixa. Adicionalmente, o departamento diz que os carros com sistemas automáticos de direção (ou até mesmo carros completamente autônomos) se beneficiaram das informações fornecidas pelo sistemas V2V.~\cite{usdot}
 
 \section{V2I}
 \label{sec:v2i}
+Da mesma forma como acontece no caso do V2V, no paradigma de Veículo para Infraestrutura (V2I) os carros podem se comunicar, mas aqui a comunicação ocorre entre o carro e a infraestrutura, podendo receber instruções dela, assim como enviar instruções sobre as condições do veículo ou dados sobre o trânsito. A infraestrutura por sua vez, vem a ser as antenas que captam os dados do carro e os enviam para a nuvem, podendo usar estas informações transmitidas para se tomar decisões sobre o trânsito, analisar estatísticas, apontar trechos em que seja necessária a intervenção dos agentes de trânsito e trazer maior facilidade para o gerenciamento do mesmo.~\cite{howard2014}
 
+Além da administração por parte dos agentes organizacionais, é possível que estes enviem mensagens para os carros a fim de alertar sobre algo á frente ou passar alguma informação relevante ao motorista, desta forma é possível notar as grandes vantagens trazidas por esse tipo de conexão que pode evitar acidentes e melhorar as condições do trânsito.~\cite{howard2014}
+
+\subsection{Aplicação}
+\label{subsec:aplicacao}
+Como é apresentado em~\cite{tecmundo} hoje já é possível se ter exemplos da aplicação desta tecnologia, é o caso da empresa alemã Audi que está implantando nas próximas versões dos seus carros a tecnologia que ao parar em um semáforo inteligente, é exibido no painel do carro um temporizador indicando quanto tempo falta para abrir o semáforo, algo tido como não muito útil inicialmente, mas é só o começo do que há de vir, a ideia é avançar em busca de carros autônomos. 
+
+O funcionamento deste sistema se dá pela comunicação do carro com as centrais de tráfego, instaladas nos semáforos, estas por sua vez se comunicam com os servidores, os quais enviam a informação que o veículo necessita, ao receber essas informações os veículos podem tomar ações, no caso de um carro autônomo (futuramente) ele poderia se preparar para uma parada no semáforo, trazendo maior economia de combustível.
+
+Esta é uma tecnologia que tende a aumentar com o passar dos anos, pois no momento ainda é preciso que se reestruturem as cidades para que possa receber este tipo de tecnologia, como é o caso das centrais de tráfego, que atualmente não há este tipo de dispositivo instalado dentro das cidades, mas futuramente será algo necessário e que trará grandes benefícios a população podendo gerenciar o trânsito de forma inteligente evitando congestionamentos e gerenciando de forma mais eficiente o tempo dos semáforos.
 
 %\autoref{chap:cap1}
 % ---
