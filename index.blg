@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2016)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: index.aux
 A level-1 auxiliary file: pre-textuais/lista-ilustracoes.aux
@@ -21,10 +21,12 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Database file #1: abntex2-options.bib
 Database file #2: pos-textuais/bibliografia.bib
+Warning--entry type for "usdot" isn't style-file defined
+--line 73 of file pos-textuais/bibliografia.bib
 Warning--entry type for "smartcities2017" isn't style-file defined
---line 66 of file pos-textuais/bibliografia.bib
+--line 82 of file pos-textuais/bibliografia.bib
 Warning--entry type for "convergenciadigital" isn't style-file defined
---line 75 of file pos-textuais/bibliografia.bib
+--line 91 of file pos-textuais/bibliografia.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
@@ -35,45 +37,45 @@ Warning--campo year vazio em gonccalomodelo
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 10 entries,
+You've used 12 entries,
             6714 wiz_defined-function locations,
-            1256 strings with 11221 characters,
-and the built_in function-call counts, 10949 in all, are:
-= -- 1240
-> -- 190
-< -- 236
-+ -- 338
-- -- 59
-* -- 661
-:= -- 1454
-add.period$ -- 31
-call.type$ -- 10
-change.case$ -- 77
-chr.to.int$ -- 19
-cite$ -- 10
-duplicate$ -- 968
-empty$ -- 524
-format.name$ -- 283
-if$ -- 2239
+            1264 strings with 11664 characters,
+and the built_in function-call counts, 14498 in all, are:
+= -- 1697
+> -- 220
+< -- 364
++ -- 476
+- -- 69
+* -- 856
+:= -- 1879
+add.period$ -- 39
+call.type$ -- 12
+change.case$ -- 91
+chr.to.int$ -- 21
+cite$ -- 12
+duplicate$ -- 1409
+empty$ -- 628
+format.name$ -- 329
+if$ -- 2884
 int.to.chr$ -- 0
 int.to.str$ -- 0
-missing$ -- 163
-newline$ -- 54
-num.names$ -- 45
-pop$ -- 217
+missing$ -- 196
+newline$ -- 65
+num.names$ -- 55
+pop$ -- 259
 preamble$ -- 1
-purify$ -- 34
+purify$ -- 40
 quote$ -- 0
-skip$ -- 1073
+skip$ -- 1518
 stack$ -- 1
-substring$ -- 448
-swap$ -- 354
-text.length$ -- 10
+substring$ -- 613
+swap$ -- 501
+text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 2
 warning$ -- 1
-while$ -- 62
+while$ -- 75
 width$ -- 0
-write$ -- 145
-(There were 3 warnings)
+write$ -- 174
+(There were 4 warnings)

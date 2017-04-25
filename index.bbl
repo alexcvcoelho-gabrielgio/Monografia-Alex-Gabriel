@@ -52,6 +52,14 @@ Alexandra Institute, 2011.}
 {SANTAELLA, L. et al. \textbf{Desvelando a internet das coisas}.
 \emph{Revista GEMInIS}, v.~1, n. 2 Ano 4, p. 19--32, 2013.}
 
+\bibitem[Thomas 2016]{usdot}
+\abntrefinfo{Thomas}{THOMAS}{2016}
+{THOMAS, B. \emph{\textbf{U.S. DOT Advances Deployment Of Connected Vehicle
+  Technology To Prevent Hundreds Of Thousands Of Crashes}}. 2016.
+Acesso 24 Abr. 2017.
+Dispon{\'\i}vel em:
+  \url{https://www.transportation.gov/briefing-room/us-dot-advances-deployment-connected-vehicle-technology-prevent-hundreds-thousands}.}
+
 \bibitem[Tratz-Ryan 2017]{smartcities2017}
 \abntrefinfo{Tratz-Ryan}{TRATZ-RYAN}{2017}
 {TRATZ-RYAN, B. \emph{\textbf{Tecnologias de IoT são peças-chave para
@@ -59,5 +67,11 @@ Alexandra Institute, 2011.}
 Acesso 23 Abr. 2017.
 Dispon{\'\i}vel em:
   \url{http://computerworld.com.br/tecnologias-de-iot-sao-pecas-chave-para-solucoes-de-cidades-inteligentes}.}
+
+\bibitem[Wise 2011]{report2013}
+\abntrefinfo{Wise}{WISE}{2011}
+{WISE, D. \textbf{Vehicle-to-Vehicle Technologies Expected to Offer Safety
+  Benefits, but a Variety of Deployment Challenges Exist}.
+United States Government Accountability Office, 2011.}
 
 \end{thebibliography}
