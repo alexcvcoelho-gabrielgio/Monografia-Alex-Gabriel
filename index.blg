@@ -22,13 +22,13 @@ Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Database file #1: abntex2-options.bib
 Database file #2: pos-textuais/bibliografia.bib
 Warning--entry type for "usdot" isn't style-file defined
---line 88 of file pos-textuais/bibliografia.bib
+--line 96 of file pos-textuais/bibliografia.bib
 Warning--entry type for "smartcities2017" isn't style-file defined
---line 97 of file pos-textuais/bibliografia.bib
+--line 105 of file pos-textuais/bibliografia.bib
 Warning--entry type for "convergenciadigital" isn't style-file defined
---line 106 of file pos-textuais/bibliografia.bib
+--line 114 of file pos-textuais/bibliografia.bib
 Warning--entry type for "tecmundo" isn't style-file defined
---line 115 of file pos-textuais/bibliografia.bib
+--line 123 of file pos-textuais/bibliografia.bib
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
@@ -39,45 +39,45 @@ Warning--campo year vazio em gonccalomodelo
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://www.abntex.net.br/                               |
 +---------------------------------------------------------+
-You've used 14 entries,
+You've used 15 entries,
             6714 wiz_defined-function locations,
-            1274 strings with 12077 characters,
-and the built_in function-call counts, 19041 in all, are:
-= -- 2308
-> -- 251
+            1279 strings with 12172 characters,
+and the built_in function-call counts, 19551 in all, are:
+= -- 2334
+> -- 266
 < -- 545
-+ -- 665
-- -- 79
-* -- 1108
-:= -- 2407
-add.period$ -- 47
-call.type$ -- 14
-change.case$ -- 105
-chr.to.int$ -- 26
-cite$ -- 14
-duplicate$ -- 2004
-empty$ -- 731
-format.name$ -- 375
-if$ -- 3688
++ -- 670
+- -- 84
+* -- 1142
+:= -- 2486
+add.period$ -- 50
+call.type$ -- 15
+change.case$ -- 112
+chr.to.int$ -- 27
+cite$ -- 15
+duplicate$ -- 2033
+empty$ -- 776
+format.name$ -- 398
+if$ -- 3800
 int.to.chr$ -- 0
 int.to.str$ -- 0
-missing$ -- 229
-newline$ -- 76
-num.names$ -- 65
-pop$ -- 303
+missing$ -- 245
+newline$ -- 81
+num.names$ -- 70
+pop$ -- 323
 preamble$ -- 1
-purify$ -- 46
+purify$ -- 49
 quote$ -- 0
-skip$ -- 2113
+skip$ -- 2143
 stack$ -- 1
-substring$ -- 830
-swap$ -- 702
+substring$ -- 847
+swap$ -- 710
 text.length$ -- 13
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 2
 warning$ -- 1
-while$ -- 88
+while$ -- 94
 width$ -- 0
-write$ -- 204
+write$ -- 218
 (There were 5 warnings)
