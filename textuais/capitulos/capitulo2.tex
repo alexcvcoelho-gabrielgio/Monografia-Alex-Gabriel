@@ -1,6 +1,38 @@
 \chapter{Sistemas de Big Data}
 \label{chap:bigdata}
-Explicar o conceito de Big Data, ferramentas dentro do trabalho que se utiliza para aplicá-la, mostrando juntamente a tecnologia que será empregada para o desenvolvimento.
+Se como dito no capitulo anterior, objetos estão na rede capturando informações e gerando dados, desta forma algo deve ser feito com esses dados, eles precisam ser organizados seguindo algum critério, caso contrário passam a ser dados soltos que não fazem sentido algum. É neste contexto que surge o conceito de Big Data, que ganhou força nos anos 2000, e mostrou a população uma aplicação real e funcional na reeleição de Barack Obama em 2012, quando sua equipe de tecnologia se utilizou do Big Data para saber sobre os comentários a respeito do presidente e assim construir estatísticas para que servissem como indicadores de tomadas de decisões políticas pelo presidente.
+
+Analisando o contexto atual, da nova era da tecnologia, se tem em média 100 bilhões de transações de cartão de crédito por dia acontecendo ao redor do mundo, cerca de 200 milhões de e-mails enviados a cada minuto. Em 2011 a Digital Universe Study (IDC) que a quantidade de dados gerado por mês em 2010 era de 1 exabyte, e ainda projetou que até 2020 esse número cresça 50 vezes mais. Sendo assim a cada dia se produz mais dados de todos os tipos possíveis, estruturados, não estruturados e em diferentes formatos. A tabela \ref{tab:medidadados} mostra algumas medidas de dados para comparação com os dados gerado mundialmente.~\cite{sinha2014making}
+
+\begin{table}[h]
+\centering
+\caption{Grandeza de dados}
+\label{tab:medidadados}
+\begin{tabular}{|c|c|c|}
+\hline 
+\rule[-1ex]{0pt}{2.5ex} \textbf{Medida} & \textbf{Representação Numérica} & \textbf{Exemplo} \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} Byte & 1 & Único caractere \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} Kilobyte & 1000 & Uma sentença \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} Megabyte & 1000000 & 20 slides do PowerPoint \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} Gigabyte & 1000000000 & 10 livros \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} Terabyte & 1000000000000 & 300 horas de video em boa qualidade \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} Petabyte & 1000000000000000 & 350 mil fotos digitais \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} Exabyte & 1000000000000000000 & 100 mil vezes a biblioteca do congresso \\ 
+\hline 
+\rule[-1ex]{0pt}{2.5ex} Zettabyte & 1000000000000000000000 & Difícil de dar um exemplo \\ 
+\hline 
+\end{tabular} 
+\end{table}
+\legend{Fonte: \citeauthor{sinha2014making}, \citeyear{sinha2014making} (Adaptado)} 
+
+
 
 \section{V2V}
 \label{sec:v2v}
