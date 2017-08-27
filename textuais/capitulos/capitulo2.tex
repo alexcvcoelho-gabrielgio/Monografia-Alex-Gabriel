@@ -46,22 +46,29 @@ O Big Data não foi algo que surgiu agora, mas foi uma junção dos últimos cin
 
 \subsection{Primeira Onda}
 \label{subsec:primeiraonda}
-Em 1960 com a entrada da computação no mercado os dados passaram a ser armazenados em arquivos simples, o que era pouco eficiente, pois para levantar dados sobre clientes era necessário ir em busca de arquivos soltos, em 1970 com a criação do modelo relacional os dados precisaram ser convertidos para esse novo modo de estruturar os dados, para isso utilizou-se de força bruta, pois não havia uma forma de estruturar aqueles dados automaticamente.
+Em 1960 com a entrada da computação no mercado os dados passaram a ser armazenados em arquivos simples, o que era pouco eficiente, pois para levantar dados sobre clientes era necessário ir em busca de arquivos soltos, em 1970 com a criação do modelo relacional os dados precisaram ser convertidos para esse novo modo de estruturar os dados, para isso utilizou-se de força bruta, pois não havia uma forma de estruturar aqueles dados automaticamente.~\cite{leigos}
 
-Juntamente com com o modelo relacional foi criado a linguagem SQL, que mantinha um nível de abstração sobre os dados, além de criar relatórios detalhados sobre o cliente, satisfazendo as exigências crescentes dos negócios. Logo se começou a notar deficiências neste modelo, era caro manter este volume de dados crescente, acessá-lo era lento, haviam muitas duplicações de dados, para resolver este problema criou-se o modelo Entidade Relacionamento (ER), em que cada item era definido independentemente do seu uso, aumentando a usabilidade dos dados, modelo este que é muito bem aceito até os dias de hoje.
+Juntamente com com o modelo relacional foi criado a linguagem SQL, que mantinha um nível de abstração sobre os dados, além de criar relatórios detalhados sobre o cliente, satisfazendo as exigências crescentes dos negócios. Logo se começou a notar deficiências neste modelo, era caro manter este volume de dados crescente, acessá-lo era lento, haviam muitas duplicações de dados, para resolver este problema criou-se o modelo Entidade Relacionamento (ER), em que cada item era definido independentemente do seu uso, aumentando a usabilidade dos dados, modelo este que é muito bem aceito até os dias de hoje.~\cite{leigos}
 
-Com a adoção deste modelo, conforme os dados foram crescendo, criou-se os armazéns de dados, permitindo que organizações de TI selecionassem o subconjunto de dados que pretendia se utilizar, desta forma obtendo dados mais focados nas suas áreas de negócio. Estes armazéns tinham como objetivo ajudar empresas a lidar com a grande quantidade de dados estruturados gerado, esta estratégia foi tomada nos anos de 1990.
+Com a adoção deste modelo, conforme os dados foram crescendo, criou-se os armazéns de dados, permitindo que organizações de TI selecionassem o subconjunto de dados que pretendia se utilizar, desta forma obtendo dados mais focados nas suas áreas de negócio. Estes armazéns tinham como objetivo ajudar empresas a lidar com a grande quantidade de dados estruturados gerado, esta estratégia foi tomada nos anos de 1990.~\cite{leigos}
 
-Por muito tempo os armazéns resolveram os problemas de armazenamento e gestão dos dados, mas passaram a se tornar complexos e grandes, não oferecendo mais agilidade e velocidade, sendo assim os armazéns não foram capazes de evoluir no armazenamento de dados estruturados, semiestruturado e não estruturados, sem contar que ele não dá suporte a aplicações de tempo real, pois os dados são enviados para armazéns periodicamente uma vez ao dia e muitas vezes até uma vez na semana. Como paliativo para esses novos tipos de dados adotou-se o uso de BLOB (\textit{binary large objects}) que armazenava trechos de informações adicionais em binário, como uma coluna do modelo estrutural, mas não foi o suficiente para resolver a deficiência das empresas na época. 
+Por muito tempo os armazéns resolveram os problemas de armazenamento e gestão dos dados, mas passaram a se tornar complexos e grandes, não oferecendo mais agilidade e velocidade, sendo assim os armazéns não foram capazes de evoluir no armazenamento de dados estruturados, semiestruturado e não estruturados, sem contar que ele não dá suporte a aplicações de tempo real, pois os dados são enviados para armazéns periodicamente uma vez ao dia e muitas vezes até uma vez na semana. Como paliativo para esses novos tipos de dados adotou-se o uso de BLOB (\textit{binary large objects}) que armazenava trechos de informações adicionais em binário, como uma coluna do modelo estrutural, mas não foi o suficiente para resolver a deficiência das empresas na época.~\cite{leigos} 
 
-Por fim criou-se o modelo de armazenamento de dados orientado a objetos (ODBMS, \textit{Operational Database Management Systems}), neste modelo é armazenado um BLOB diferentemente do original, neste é possível visualizar o conteúdo armazenado, oferecendo uma abordagem unificada para lidar com dados desestruturados, além de uma fácil integração com uma linguagem de programação. Este modelo foi uma inovação que ajudou a conduzir a segunda onda da gestão de dados.
+Por fim criou-se o modelo de armazenamento de dados orientado a objetos (ODBMS, \textit{Operational Database Management Systems}), neste modelo é armazenado um BLOB diferentemente do original, neste é possível visualizar o conteúdo armazenado, oferecendo uma abordagem unificada para lidar com dados desestruturados, além de uma fácil integração com uma linguagem de programação. Este modelo foi uma inovação que ajudou a conduzir a segunda onda da gestão de dados.~\cite{leigos}
 
 \subsection{Segunda Onda}
 \label{subsec:segundaonda}
+Na década de 1990 com o surgimento da \textit{web} deixou de se armazenar apenas documentos, para se armazenar áudio e vídeo também, criando assim na área da gestão de dados um modelo mais unificado, criou-se então os metadados, que mantém informações sobre a organização e característica das informações armazenadas.~\cite{leigos}
 
+Mas metadados não foi o suficiente, pois já não atendia mais os requisitos dos novos tipos de dados a serem armazenados que surgiram por conta da \textit{web}, sem contar a velocidade nessas ações, tal empecilho levou a terceira onda da gestão de dados.~\cite{leigos}
 
 \subsection{Terceira Onda}
 \label{subsec:terceiraonda}
+Na terceira onda está compreendido a era atual, em que a gestão de dados evoluiu para o Big Data, fase na qual se tem dados como foto, vídeo e áudio a serem armazenados, desta forma a alternativa encontrada foi virtualizar esses dados e armazená-los em nuvem, pois avanços com relação a velocidade de rede e confiança, removeram muitas limitações físicas da capacidade de administrar quantidades massivas de dados, alinhado com a sofisticação de memórias de computadores, possibilitando assim o avanço para essa nova era.~\cite{leigos}
+
+Muitas das tecnologias empregadas no Big Data existem a anos, como virtualização de dados, processamento paralelo, sistema de arquivos distribuídos e base de dados \textit{in-memory}, mas se tem algumas das tecnologias que foram criadas agora para atender o que o Big Data se propõem a entregar, como o Hadoop e MapReduce. Não só na área privada, mas o ramo da ciência, pesquisa e o governo tiveram uma grande parcela no incentivo para o desenvolvimento dessas tecnologias, pois era necessário analisar o genoma humano, analisar os dados astronômicos e coletar dados para fins antiterroristas, o que são alguns dos exemplos de utilização nessas áreas.~\cite{leigos}
+
+Desta forma Big Data não vem a ser uma ferramenta ou tecnologia específica, mas sim um encontro de tecnologias diferentes que quando juntas promovem ideias certas, no tempo certo, baseadas nos dados certos, sejam eles vindos de qualquer fonte geradora de dados. As próximas evoluções tendem a ser através da junção de outras tecnologias que já existem e possam ser utilizadas de alguma forma a integrar com o Big Data.~\cite{leigos}
 
 \section{Processamento de dados em tempo real}
 O termo \textit{Big Data}, como já explicado anteriormente, e' utilizando quando o grupo de dados que esta sendo analisado e' tao grande que não pode ser processado usando técnicas clássicas como utilização de banco de dados relacional (RDBMS ou \textit{Relational Data Base Systems}. E a necessidade de velocidade em toda \textit{pipeline} e' acentuada ainda mais quado se pretende fazer processamento em tempo real dos dados obtidos.
@@ -83,8 +90,32 @@ A memoria pode oferecer uma alta quantidade de informação a mais de 10 GB/s. A
 Isso não significa que toda a informação tem que estar na memoria, se somente um parte da informação estiver cacheada em memoria já significaria um grande ganho de performance.
 
 
+\section{Características do Big Data}
+\label{sec:funcbigdata}
+Comumente são usadas três características para se descrever o Big Data, o que é chamado de 3Vs (volume, velocidade e variedade), ainda existem outras abordagens que tratam como 5Vs (volume, velocidade, variedade, veracidade e valor), estas características mencionadas servem como pré-requisito para se caracterizar armazenamentos e analise de dados como Big Data.
 
+\subsection{Volume}
+\label{subsec:volume}
+O a quantificação do volume de dados na computação é relativa, pois ela é dependente do tempo, o que hoje pode ser considerado um volume grande amanhã pode já não ser mais, por esse fato muitas mídias de armazenamento foram sendo substituídas por outras, pois a demanda de armazenamento cresce exponencialmente e novas formas para se armazenar dados precisam ser criadas.~\cite{forbes} 
 
+O Big Data tem a proposta de trabalhar com um volume de dados atualmente considerado grande o suficiente para que os modelos tradicionais não suporte o mesmo trabalho, dados como iterações em redes sociais, trocas de email diária, transações bancárias, entre outros. Estes são exemplos de dados hoje considerados muito grandes para se trabalhar de forma tradicional, até porque muitos desses dados não estão estruturados e trabalham com tipos de dados diferentes.~\cite{forbes}  
 
+\subsection{Velocidade}
+\label{subsec:velocidade}
+\begin{citacao}
+Você cruzaria uma rua vendado se a última informação que tivesse fosse uma fotografia tirada do tráfego circulante de 5 minutos atrás? Provavelmente não, pois a fotografia de 5 minutos atrás é irrelevante, você precisa saber das condições atuais para poder cruzar a rua em segurança.~\cite[p. 2]{forbes} 
+\end{citacao}
 
- 
+É exatamente isso, nessa nova onda houve uma imersão de tecnologias \textit{real time}, não que antes não existissem, mas com as novas tecnologias seu uso se tornou mais acessível, e para que ela funcione cumprindo seu propósito é necessário que haja velocidade, tanto no armazenamento, como na busca e na analise de resultados. É importante ressaltar que esse conceito de velocidade não está necessariamente relacionado com rapidez, mas sim com a exatidão do tempo de determinada ação, por mais que uma determinada ação demore horas, o importante é ao final desse tempo pré estipulado, o resultado estar disponível.~\cite{forbes} 
+
+\subsection{Variedade}
+\label{subsec:variedade}
+Quando se fala de variedade dentro de Big Data, isto se refere a grande variedade de dados com que ele trabalha, além de virem de fontes diferentes, os mesmos possuem formatos diferentes, organizado em diferentes formas, por exemplo fotos, áudio, vídeo, informações de usuários, todas essas informações estarão organizados de forma estrutural, semi estrutural e não estrutural e o Big Data deve ser capaz de trabalhar com eles.
+
+\subsection{Veracidade}
+\label{subsec:veracidade}
+Veracidade está diretamente relacionado com a velocidade, pois para os resultados obtidos serem verídicos, ou seja serem confiáveis, é necessário que ele pertença ao tempo que se pretende analisar, de nada vale uma analise de dados que gerou resultados de um tempo passado, é necessário o dado verídico no tempo esperado, caso contrário não será possível se utilizar dos resultados obtidos, por isso a velocidade influencia na veracidade.
+
+\subsection{Valor}
+\label{subsec:valor}
+O valor está relacionado ao propósito de se fazer o uso do Big Data, pois antes da analise e obtenção de resultados, é necessário que se tenha questionamentos a serem respondidos através do uso do Big Data, ou seja, é necessário que o resultado obtido gere valor para o fim que ele está sendo usado, seja ele melhora no relacionamento da empresa com o cliente ou em áreas da ciência ou ainda do governo.
