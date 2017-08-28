@@ -46,21 +46,63 @@ O \textit{Big Data} não foi algo que surgiu agora, mas foi uma junção dos úl
 
 \subsection{Primeira Onda}
 \label{subsec:primeiraonda}
-Em 1960 com a entrada da computação no mercado os dados passaram a ser armazenados em arquivos simples, o que era pouco eficiente, pois para levantar dados sobre clientes era necessário ir em busca de arquivos soltos, em 1970 com a criação do modelo relacional os dados precisaram ser convertidos para esse novo modo de estruturar os dados, para isso utilizou-se de força bruta, pois não havia uma forma de estruturar aqueles dados automaticamente.%~\cite{leigos}
+Em 1960 com a entrada da computação no mercado os dados passaram a ser armazenados em arquivos simples, o que era pouco eficiente, pois para levantar dados sobre clientes era necessário ir em busca de arquivos soltos, em 1970 com a criação do modelo relacional os dados precisaram ser convertidos para esse novo modelo, para isso utilizou-se de força bruta (trabalho manual), pois não havia uma forma de estruturar aqueles dados automaticamente.%~\cite{leigos}
 
-Juntamente com o modelo relacional foi criado a linguagem SQL, que mantinha um nível de abstração sobre os dados, além de criar relatórios detalhados sobre o cliente, satisfazendo as exigências crescentes dos negócios. Logo se começou a notar deficiências neste modelo, era caro manter este volume de dados crescente, e acessá-lo era lento, sem contar que haviam muitas duplicações de dados, para resolver este problema criou-se o modelo Entidade Relacionamento (ER), em que cada item era definido independentemente do seu uso, aumentando a usabilidade dos dados, modelo este que é muito bem aceito até os dias de hoje.%~\cite{leigos}
+\subsubsection{Modelo Relacional}
+\label{subsubsec:modelorelacional}
+O Modelo Relacional vem da teoria dos conjuntos (álgebra relacional), representado por um conjunto de tabelas (entidade/relação), estas ainda se dividem em colunas (atributos) e linhas (tuplas), e são nessas tabelas que os dados são armazenados, tendo cada entidade separada em uma tabela, e estas tendo relações entre si através de colunas chaves, desta forma é possível realizar pesquisas em uma entidade isolada ou usar das relações entre elas para se pesquisar mais de uma entidade de única vez.
 
-Com a adoção deste modelo, conforme os dados foram crescendo, criou-se os armazéns de dados, permitindo que organizações de TI selecionassem o subconjunto de dados que pretendia se utilizar, desta forma obtendo dados mais focados nas suas áreas de negócio. Estes armazéns tinham como objetivo ajudar empresas a lidar com a grande quantidade de dados estruturados gerado, esta estratégia foi tomada nos anos de 1990.~\cite{leigos}
+Quanto a entidade ela é a representação de um componente do mundo real sobre a qual se deseja guardar informações, elas são coisas significativas, como por exemplo: Cliente, Produto e Compra. Desta forma temos entidades que geram valor armazenadas de forma tabular, tendo cada novo registro sendo uma nova linha dentro desta entidade e em cada linha uma sequência de atributos como sendo as colunas, a figura~\ref{fig:modelorelacional} apresenta um exemplo de organização no modelo relacional, com tabelas, atributos e relações.~\cite{relacional}
 
-Por muito tempo os armazéns resolveram os problemas de armazenamento e gestão dos dados, mas passaram a se tornar complexos e grandes, não oferecendo mais agilidade e velocidade, sendo assim os armazéns não foram capazes de evoluir no armazenamento de dados estruturados, semiestruturado e não estruturados, sem contar que neles não se tem suporte a aplicações de tempo real, pois os dados são enviados para armazéns periodicamente uma vez ao dia e muitas vezes até uma vez na semana. Como paliativo para esses novos tipos de dados adotou-se o uso de BLOB (\textit{binary large objects}) que armazenava trechos de informações adicionais em binário, como uma coluna do modelo estrutural, mas não foi o suficiente para resolver a deficiência das empresas na época.%~\cite{leigos} 
+\begin{figure}[!h]
+\caption{\label{fig:modelorelacional} Modelo Relacional}
+\begin{center}
+\includegraphics[scale=0.5]{modelorelacional}
+\end{center}
+%\legend{Fonte: \citeauthor{revistavia}, \citeyear{revistavia}} 
+\legend{Fonte: Coelho} 
+\end{figure}
 
-Por fim criou-se o modelo de armazenamento de dados orientado a objetos (ODBMS, \textit{Operational Database Management Systems}), neste modelo é armazenado um BLOB, diferentemente do original, neste é possível visualizar o conteúdo armazenado, oferecendo uma abordagem unificada para lidar com dados desestruturados, além de uma fácil integração com uma linguagem de programação. Este modelo foi uma inovação que ajudou a conduzir a segunda onda da gestão de dados.~\cite{leigos}
+\subsubsection{Linguagem SQL}
+\label{subsubsec:sql}
+Para trabalhar com o modelo relacional foi criado uma linguagem, chamada SQL (\textit{Structured Query Language}), a qual geralmente eram escritas e executadas nos SGBDs (Sistema Gerenciador de Banco de Dados) e tinham a função de manipulação, definição e controle de dados, através de \textit{querys}, que eram sentenças de comandos a fim de realizar uma ação sobre os dados armazenados. Ela mantinha um nível de abstração sobre os dados, além de ser útil para criar relatórios detalhados sobre o cliente, manter um controle de acesso aos dados, e todo o gerenciamento necessário, satisfazendo as exigências crescentes dos negócios. A figura ~\ref{fig:sqlquery} mostra uma \textit{query} escrita em linguagem SQL que busca todos os dados da entidade veículo presente no banco de dados.~\cite{sqlquery}
+
+\begin{figure}[!h]
+\caption{\label{fig:sqlquery} \textit{Query} SQL}
+\begin{center}
+\includegraphics[scale=0.5]{sqlquery}
+\end{center}
+%\legend{Fonte: \citeauthor{revistavia}, \citeyear{revistavia}} 
+\legend{Fonte: Coelho} 
+\end{figure}
+
+\subsubsection{Data Warehouse}
+\label{subsubsec:datawarehouse}
+Com a adoção do modelo relacional, conforme os dados foram crescendo, criou-se em meados da década de 90 o \textit{Data Warehouse} (DW) (armazéns de dados), que é um repositório de dados organizados por assunto, por exemplo em uma empresa de arrecadação de impostos, os assuntos que interessam a empresa são os cadastros de contribuintes e impostos a receber, sendo assim, esses dados são minerados do ambiente transacional da empresa (bancos que estão em produção na empresa), também conhecido como OLTP (\textit{On-line Transaction Processing}), e vão para um DW (um banco a parte) conhecido como OLAP (\textit{On-line Analytical Processing}).
+
+Neste DW é preciso que se tenha integração com a base de dados original, a fim de padronizar os dados que se tem em ambas as bases de dados, é preciso também que ele seja não-volátil, para isso dentro de um DW, só são permitidas operações de consulta e exclusão, mantendo-o não volátil. Outra característica é que ele deve ser variável com o tempo, pois todo dado disponível dentro de um DW se refere a um determinado período de tempo, e esses dados não são atualizados em tempo real para que não afete o desempenho dos bancos transacionais.
+
+Como resultado final de um DW se tem a obtenção de relatórios e estatísticas sobre aqueles determinados assuntos para o qual o DW foi criado, estes são alimentados pelos \textit{Data Marts} que são divisões lógicas dentro do DW, geralmente dentro das empresas é a separação em departamentos, em que cada usuário verá dados relacionados ao seu departamento. A figura \ref{chap:bigdata} mostra a arquitetura básica de um DW.~\cite{datawarehouse}
+
+\begin{figure}[!h]
+\caption{\label{fig:sqlquery} Arquitetura de um \textit{Data Warehouse}}
+\begin{center}
+\includegraphics[scale=0.6]{datawarehouse}
+\end{center}
+\legend{Fonte: \citeauthor{datawarehouse}, \citeyear{datawarehouse}} 
+\end{figure}
+
+\subsubsection{Banco de Dados Orientado a Objetos}
+\label{subsubsec:bdoo}
+Com a popularização de linguagens de programação orientadas a objetos, houve a necessidade de armazena-los da mesma forma com que eram manipulados, sendo assim criou-se o Banco de Dados Orientado a Objetos, uma alternativa ao modelo relacional que se mantêm forte até os dias de hoje. Partindo da premissa de que são armazenados objetos juntamente com seus atributos, mantendo seu estado de quando foram armazenados, o relacionamento entre os objetos se dá da mesma forma que no modelo relacional, se utilizando de chaves estrangeiras, e nas relações de "tabela-filha" neste tipo de armazenamento seria um atributo que tenha como valor outro objeto. Eles são armazenados serializados, sendo possível retornar ao seu estado quando são deserializados.~\cite{bdoo}
 
 \subsection{Segunda Onda}
 \label{subsec:segundaonda}
-Na década de 1990 com o surgimento da \textit{web}, deixou de se armazenar apenas documentos, para se armazenar áudio e vídeo também, criando assim na área da gestão de dados um modelo mais unificado, criou-se então os metadados, que mantém informações sobre a organização e característica das informações armazenadas.~\cite{leigos}
+Na década de 1990 com o surgimento da \textit{web}, deixou de se armazenar apenas documentos, para se armazenar áudio e vídeo também, fazendo com que novas tecnologias surgissem para dar conta da nova demanda, criando assim na área da gestão de dados um modelo mais unificado, os metadados.~\cite{leigos}
 
-Mas metadados não foi o suficiente, pois já não atendia mais os requisitos dos novos tipos de dados a serem armazenados que surgiram por conta da \textit{web}, sem contar a velocidade nessas ações, tal empecilho levou a terceira onda da gestão de dados.~\cite{leigos}
+\subsubsection{Metadados}
+\label{subsubsec:metadados}
+De forma simplista é possível dizer que metadados são dados que descrevem dados, ou seja ele mantêm uma descrição concisa sobre o tipo do dado armazenado, seja ele tabela, imagem, gráfico ou vídeo. O banco de dados se utilizam de metadados para armazenar o tipo de dado que contêm nas tabelas por exemplo, as classes de objetos são metadados dos objetos, entre muitos outros exemplo. Mas o que é importante destacar é que se os dados não estão documentados, é possível que haja inconsistências, além de maior dificuldade de manutenção desses dados.~\cite{metadados}
 
 \subsection{Terceira Onda}
 \label{subsec:terceiraonda}
