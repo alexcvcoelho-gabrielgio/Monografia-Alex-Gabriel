@@ -162,12 +162,12 @@ A memória pode oferecer uma alta quantidade de informação a mais de 10 GB/s. 
 Isso não significa que toda a informação tem que estar na memória, se somente uma parte da informação estiver em cache na memória já significaria um grande ganho de performance.~\cite{realtime}
 
 \subsection{Hadoop}
-Hadoop em resumo e um biblioteca para sistemas processamento destribado de grande quantidade de informação entre \textit{clusters} de computares usando modelos simples de programação. Ele e desenvolvido para escalar de um simples computador para milhares, onde cada um pode oferecer sua própria unidade de computação e armazenamento.~\cite{hadoop}
+Hadoop em resumo e um biblioteca para sistemas processamento destribado de grande quantidade de informação entre \textit{clusters} de computares usando modelos simples de programação. Ele é desenvolvido para escalar de um simples computador para milhares, onde cada um pode oferecer sua própria unidade de computação e armazenamento.~\cite{hadoop}
 
 Hadoop pode resolver diversos problemas no campo de \textit{Big Data} oferecendo velocidade e variedade como discutido nos 3Vs. Haddoop em pode ser divido em 4 etapas:~\cite{hadoopessentials}
 \begin{itemize}
-	\item \textbf{Captura dos dados:} as fontes de dados e' extensiva e pode ser tando estruturada, semi-estruturada, e ate \textit{streaming} de dados (tempo real). Estendendo também para sensores e diversos dispositivos. Tendo integração com diversas fontes de dados com Flume, Storm, e outros fontes de dados so sistema Hadoop.
-	\item \textbf{Processamento:} se trada de filtros e transformacoes que serao aplicados  nos dados usando ferramente como baseada na ligica do MapReduce. Hadoop hoje suporta uma quantidade grande de bibliotecas como MapReduce, Hive, Pig, Spark, Storm, etc como mostrado na figura ~\ref{fig:hadoopint}.
+	\item \textbf{Captura dos dados:} as fontes de dados é extensiva e pode ser tando estruturada, semi-estruturada, e ate \textit{streaming} de dados (tempo real). Estendendo também para sensores e diversos dispositivos. Tendo integração com diversas fontes de dados como Flume, Storm, e outros fontes de dados do sistema Hadoop.
+	\item \textbf{Processamento:} se trada de filtros e transformações que serão aplicados  nos dados usando ferramente como baseada na logica do MapReduce. Hadoop hoje suporta uma quantidade grande de bibliotecas como MapReduce, Hive, Pig, Spark, Storm, etc como mostrado na figura ~\ref{fig:hadoopint}.
 	\begin{figure}[!h]
 		\caption{\label{fig:hadoopint} Sistemas que se integram com Hadoop.}
 		\begin{center}
@@ -179,7 +179,7 @@ Hadoop pode resolver diversos problemas no campo de \textit{Big Data} oferecendo
 	\item \textbf{\textit{Feedback}}: trata-se de analisar os dados e auditar para futuras melhoras no sistam \textit{Big Data}.
 \end{itemize}
 
-A figura ~\ref{fig:hadoopflow} mostra como o dado e capturado e entao processado no Hadoop, e os resultado usados no sistema de BI.~\cite{hadoopessentials}
+A figura ~\ref{fig:hadoopflow} mostra como o dado e capturado e então processado pelo Hadoop, e os resultado são utilizados em sistemas de BI.~\cite{hadoopessentials}
 
 \begin{figure}[!h]
 	\caption{\label{fig:hadoopflow} Fluxo básico de informações do Hadoop.}
@@ -191,14 +191,14 @@ A figura ~\ref{fig:hadoopflow} mostra como o dado e capturado e entao processado
 
 
 \subsection{Apache Spark}
-Apache Spark e um sistema cluster de uso geram com foco em velocidade. Ele prove uma API em Java, Scala, Python e R, e um \textit{engine} otimizada que suporta grafos de uso geral. Entres suas ferramentas ele possui um grupo de ferramentas de alto nível incluindo Spark Sql, MLlib para aprendizado de maqui, GraphX para processamento gráfico e por ultimo Spark Streaming.
+Apache Spark e um sistema \textit{cluster} de uso geral com foco em velocidade. Ele prove APIs em Java, Scala, Python e R, e um \textit{engine} otimizada que suporta grafos de uso geral. Entres suas bibliotecas ele possui um grupo de ferramentas de alto nível incluindo Spark Sql, MLlib para aprendizado de maquina, GraphX para processamento gráfico e por ultimo Spark Streaming para processamento de dados em tempo real.
 
-Abstraindo Spark em alto nível pode dizer que cada aplicação Spark consiste de um \textit{driver} que roda na função principal e executa diversas operacoes em paralelo em um \textit{cluster}. Spark também prove entre seu grupo de ferramentas ferramentas um \textit{resilient distributed dataset}(RDD), que consiste em uma coleção de elementos particionados entre diversos nodes de um \textit{cluter}. Esses elementos particionados podem ser acessadas de forma paralela. Normalmente os RDD são criados a partir de um HDFS. Pode-se escolher também hospedar esse RDD em memoria, deixando-o assim mais eficiente.
+Abstraindo Spark em um alto nível pode dizer que cada aplicação Spark consiste de um \textit{driver} que roda na função principal e executa diversas operacoes em paralelo em um \textit{cluster}. Spark também prove entre seu grupo de ferramentas ferramentas um \textit{resilient distributed dataset}(RDD), que consiste em uma coleção de elementos particionados entre diversos nodes de um \textit{cluter}. Esses elementos particionados podem ser acessadas de forma paralela. Normalmente os RDD são criados a partir de um HDFS. Pode-se escolher também hospedar esse RDD em memoria, deixando-o assim mais eficiente.
 
-Uma segunda abstração sao as variáveis compartilhadas que podem ser usadas em operacoes paralelas. Normalmente quando se inicia uma função em paralelo uma copia das variável e usada em cada instancia. Mas algumas vezes se quer compartilhar essas informações com todas as tarefas.
+Uma segunda abstração são as variáveis compartilhadas que podem ser usadas em operacoes paralelas. Normalmente quando se inicia uma função em paralelo uma copia das variável e usada em cada instancia. Mas algumas vezes se quer compartilhar essas informações com todas as tarefas.
 
 \subsubsection{Spark Streaming}
-Spark Streaming e uma extercao do \textit{core} do Spark Api que habilita escalabilidade, alta disposição, tolerância a falhas de \textit{data streams}. Dados podem ser adicionados de bastantes origens  como Kafka, Flume ou ate mesmo sockets TCP como demonstrado na figura~\ref{fig:sparkstreaming}, pode ser processadas usando algoritmos complexos que podem ser expressados em funções de alto nível como \textit{map, reduce, join,} e \textit{window}. Podendo ser aplicados outros algorítimos de aprendizado de maquina e processamento de grafos do próprio Spark.~\cite{sparkstreaming}
+Spark Streaming é uma extensão do \textit{core} do Spark Api que habilita escalabilidade, alta disposição, tolerância a falhas de \textit{data streams}. Dados podem ser utilizados a partir de um grande numeros de fontes como Kafka, Flume ou ate mesmo sockets TCP como mostrado na figura~\ref{fig:sparkstreaming}. Esses dados podem ser processados usando algoritmos complexos que podem ser expressados em funções de alto nível como \textit{map, reduce, join,} e \textit{window}. Podendo ser aplicados outros algorítimos de aprendizado de maquina e processamento de grafos do próprio ecossistema Spark.~\cite{sparkstreaming}
 
 \begin{figure}[!h]
 	\caption{\label{fig:sparkstreaming} Exemplo de fonte de informação que o Spark Streaming suporta.}
