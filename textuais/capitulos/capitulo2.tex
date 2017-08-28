@@ -50,9 +50,9 @@ Em 1960 com a entrada da computação no mercado os dados passaram a ser armazen
 
 \subsubsection{Modelo Relacional}
 \label{subsubsec:modelorelacional}
-O Modelo Relacional vem da teoria dos conjuntos (álgebra relacional), representado por um conjunto de tabelas (entidade/relação), estas ainda se dividem em colunas (atributos) e linhas (tuplas), e são nessas tabelas que os dados são armazenados, tendo cada entidade separada em uma tabela, e estas tendo relações entre si através de colunas chaves, desta forma é possível realizar pesquisas em uma entidade isolada ou usar das relações entre elas para se pesquisar mais de uma entidade de única vez.
+O Modelo Relacional vem da teoria dos conjuntos (álgebra relacional), representado por um conjunto de tabelas (entidade/relação), estas ainda se dividem em colunas (atributos) e linhas (tuplas), e são nessas tabelas que os dados são armazenados, tendo cada entidade separada em uma tabela, e estas tendo relações entre si através de colunas chaves, desta forma é possível realizar pesquisas em uma entidade isolada ou usar das relações entre elas para se pesquisar mais de uma entidade de uma única vez.
 
-Quanto a entidade ela é a representação de um componente do mundo real sobre a qual se deseja guardar informações, elas são coisas significativas, como por exemplo: Cliente, Produto e Compra. Desta forma temos entidades que geram valor armazenadas de forma tabular, tendo cada novo registro sendo uma nova linha dentro desta entidade e em cada linha uma sequência de atributos como sendo as colunas, a figura~\ref{fig:modelorelacional} apresenta um exemplo de organização no modelo relacional, com tabelas, atributos e relações.~\cite{relacional}
+Quanto a entidade ela é a representação de um componente do mundo real sobre a qual se deseja guardar informações, elas são coisas significativas, como por exemplo: Cliente, Produto e Compra. Desta forma temos entidades que geram valor, armazenadas de forma tabular, tendo cada novo registro como uma nova linha dentro desta entidade e em cada linha uma sequência de atributos como sendo as colunas, a figura~\ref{fig:modelorelacional} apresenta um exemplo de organização no modelo relacional, com tabelas, atributos e relações.~\cite{relacional}
 
 \begin{figure}[!h]
 \caption{\label{fig:modelorelacional} Modelo Relacional}
@@ -94,7 +94,7 @@ Como resultado final de um DW se tem a obtenção de relatórios e estatísticas
 
 \subsubsection{Banco de Dados Orientado a Objetos}
 \label{subsubsec:bdoo}
-Com a popularização de linguagens de programação orientadas a objetos, houve a necessidade de armazena-los da mesma forma com que eram manipulados, sendo assim criou-se o Banco de Dados Orientado a Objetos, uma alternativa ao modelo relacional que se mantêm forte até os dias de hoje. Partindo da premissa de que são armazenados objetos juntamente com seus atributos, mantendo seu estado de quando foram armazenados, o relacionamento entre os objetos se dá da mesma forma que no modelo relacional, se utilizando de chaves estrangeiras, e nas relações de "tabela-filha" neste tipo de armazenamento seria um atributo que tenha como valor outro objeto. Eles são armazenados serializados, sendo possível retornar ao seu estado quando são deserializados.~\cite{bdoo}
+Com a popularização de linguagens de programação orientadas a objetos, houve a necessidade de armazená-los da mesma forma com que eram manipulados, sendo assim criou-se o Banco de Dados Orientado a Objetos, uma alternativa ao modelo relacional que se mantêm forte até os dias de hoje. Partindo da premissa de que são armazenados objetos juntamente com seus atributos, mantendo seu estado de quando foram armazenados, o relacionamento entre os objetos se dá da mesma forma que no modelo relacional, se utilizando de chaves estrangeiras, e nas relações de "tabela-filha" neste tipo de armazenamento seria um atributo que tenha como valor outro objeto. Eles são armazenados serializados, sendo possível retornar ao seu estado quando são deserializados.~\cite{bdoo}
 
 \subsection{Segunda Onda}
 \label{subsec:segundaonda}
@@ -149,7 +149,7 @@ Até 2014 uma das mais notáveis ferramentas para o gerenciamento de um grande v
 
 Embora MapReduce faça com que o processamento de larga escala em dados complexos fiquem bem mais simples e eficiente ele ainda se trata de processamento em \textit{batch}, e não era ideal para a demanda recente de processamento em tempo real de um alto volume de dados.
 
-A solução para esse caso pode ser dividida em dois campos, a solução que tenta reduzir o gargalo das tecnologias como MapReduce e fazer com que ele execute seu trabalho mais rápido, e/ou uma segunda solução que provê meios para que as \textit{queries} sejam executada tanto em bando de dados SQL quanto NoSQL.~\cite{realtime}
+A solução para esse caso pode ser dividida em dois campos, a solução que tenta reduzir o gargalo das tecnologias como MapReduce e fazer com que ele execute seu trabalho mais rápido, e/ou uma segunda solução que provê meios para que as \textit{queries} sejam executada tanto em banco de dados SQL quanto NoSQL.~\cite{realtime}
 
 \subsection{Computação em memoria}
 
@@ -159,7 +159,7 @@ Mesmo que a máquina esteja equipada com vários módulos de I/O, o problema ain
 
 A memória pode oferecer uma alta quantidade de informação a mais de 10 GB/s. A latência no acesso a informação sendo na casa do nanosegundos enquanto a do disco fica na casa do milissegundo. Combinado com o preço da memória RAM, que vem ficando mais barato, torna o argumento de computação em memória muito mais viável. Há algumas soluções para computação em memória, entre elas estão; Apache Spark, GridGrain e XAP.
 
-Computação em momoria não significa que toda a informação tem que estar na memória, mas se somente uma parte da informação estiver em cache na memória já significaria um grande ganho de performance.~\cite{realtime}
+Computação em memória não significa que toda a informação tem que estar na memória, mas se somente uma parte da informação estiver em cache na memória já significaria um grande ganho de performance.~\cite{realtime}
 
 \subsection{Hadoop}
 Hadoop em resumo é uma biblioteca para sistemas processamento distribuído de grande quantidade de informação entre \textit{clusters} de computares usando modelos simples de programação. Ele é desenvolvido para escalar de um simples computador para milhares, onde cada um pode oferecer sua própria unidade de computação e armazenamento.~\cite{hadoop}
@@ -179,12 +179,12 @@ Hadoop pode resolver diversos problemas no campo de \textit{Big Data} oferecendo
 		\legend{Fonte: \citeauthor{hadoopessentials}, \citeyear{hadoopessentials}} 
 \end{figure}
 
-\item \textbf{Distribuição:} apos tratamento o dados podem ser distribuído para serem utilizado pela área de BI (\textit{Business Intelligence}), e outros sistemas de analise podem consultar os dados.
+\item \textbf{Distribuição:} após tratamento os dados podem ser distribuídos para serem utilizados pela área de BI (\textit{Business Intelligence}), e outros sistemas de análise podem consultar os dados.
 	
 \item \textbf{\textit{Feedback}}: trata-se de analisar os dados e auditar para futuras melhoras no sistema \textit{Big Data}.
 \end{itemize}
 
-A figura ~\ref{fig:hadoopflow} mostra como o dado e capturado e então processado pelo Hadoop, e os resultado são utilizados em sistemas de BI.~\cite{hadoopessentials}
+A figura ~\ref{fig:hadoopflow} mostra como o dado é capturado e então processado pelo Hadoop, e os resultados são utilizados em sistemas de BI.~\cite{hadoopessentials}
 
 \begin{figure}[!h]
 	\caption{\label{fig:hadoopflow} Fluxo básico de informações do Hadoop.}
@@ -198,12 +198,12 @@ A figura ~\ref{fig:hadoopflow} mostra como o dado e capturado e então processad
 \subsection{Apache Spark}
 Apache Spark é um sistema \textit{cluster} de uso geral com foco em velocidade. Ele provê APIs em Java, Scala, Python e R, e um \textit{engine} otimizada que suporta grafos de uso geral. Entres suas bibliotecas ele possui um grupo de ferramentas de alto nível incluindo Spark Sql, MLlib para aprendizado de maquina, GraphX para processamento de grafos e também Spark Streaming para processamento de dados em tempo real.
 
-Abstraindo Spark em um alto nível pode-se dizer que cada aplicação Spark consiste de um \textit{driver} que roda na função principal e executa diversas operações em paralelo em um \textit{cluster}. Spark também provê entre seu grupo de  ferramentas um \textit{resilient distributed dataset}(RDD), que consiste em uma coleção de elementos particionados entre diversos nós de um \textit{cluster}. Esses elementos particionados podem ser acessadas de forma paralela. Normalmente os RDD são criados a partir de um HDFS. Pode-se escolher também hospedar esse RDD em memoria, deixando-o assim mais eficiente.
+Abstraindo Spark em um alto nível pode-se dizer que cada aplicação Spark consiste de um \textit{driver} que roda na função principal e executa diversas operações em paralelo em um \textit{cluster}. Spark também provê entre seu grupo de  ferramentas um \textit{resilient distributed dataset}(RDD), que consiste em uma coleção de elementos particionados entre diversos nós de um \textit{cluster}. Esses elementos particionados podem ser acessados de forma paralela. Normalmente os RDD são criados a partir de um HDFS. Pode-se escolher também hospedar esse RDD em memória, deixando-o assim mais eficiente.
 
 Uma segunda abstração são as variáveis compartilhadas que podem ser usadas em operações paralelas. Normalmente quando se inicia uma função em paralelo uma cópia das variáveis é usada em cada instância. Mas algumas vezes se quer compartilhar essas informações com todas as tarefas.
 
 \subsubsection{Spark Streaming}
-Spark Streaming é uma extensão do \textit{core} do Spark Api que habilita escalabilidade, alta disposição, tolerância a falhas de \textit{data streams}. Dados podem ser utilizados a partir de um grande número de fontes como Kafka, Flume ou até mesmo \textit{sockets} TCP como mostrado na figura~\ref{fig:sparkstreaming}. Esses dados podem ser processados utilizando algoritmos complexos que podem ser expressados em funções de alto nível como \textit{map, reduce, join,} e \textit{window}. Podendo ser aplicados outros algorítimos de aprendizado de máquina e processamento de grafos do próprio ecossistema Spark.~\cite{sparkstreaming}
+Spark Streaming é uma extensão do \textit{core} do Spark Api que habilita escalabilidade, alta disposição, tolerância a falhas de \textit{data streams}. Dados podem ser utilizados a partir de um grande número de fontes, como Kafka, Flume ou até mesmo \textit{sockets} TCP como mostrado na figura~\ref{fig:sparkstreaming}. Esses dados podem ser processados utilizando algoritmos complexos que podem ser expressados em funções de alto nível como \textit{map, reduce, join,} e \textit{window}. Podendo ser aplicados outros algorítimos de aprendizado de máquina e processamento de grafos do próprio ecossistema Spark.~\cite{sparkstreaming}
 
 \begin{figure}[!h]
 	\caption{\label{fig:sparkstreaming} Exemplo de fonte de informação que o Spark Streaming suporta.}
@@ -213,7 +213,7 @@ Spark Streaming é uma extensão do \textit{core} do Spark Api que habilita esca
 	\legend{Fonte: \citeauthor{sparkstreaming}, \citeyear{sparkstreaming}} 
 \end{figure}
 
-Para o \textit{streaming} de dados o Spark possui uma abstração chamada \textit{discretized stream} ou \textit{DStream}. \textit{DStream} podem ser criado a partir das fontes citados acima (kafka, Flume, etc.) ou qualquer outra fonte utilizando operacoes de alto nível. Internamente \textit{DStreams} são sequências de RDDs como demonstrado na figura~\ref{fig:sparkdstream}.
+Para o \textit{streaming} de dados o Spark possui uma abstração chamada \textit{discretized stream} ou \textit{DStream}. \textit{DStream} podem ser criado a partir das fontes citados acima (kafka, Flume, etc.) ou qualquer outra fonte utilizando operações de alto nível. Internamente \textit{DStreams} são sequências de RDDs como demonstrado na figura~\ref{fig:sparkdstream}.
 
 \begin{figure}[!h]
 	\caption{\label{fig:sparkdstream} Representação de um \textit{DStream}.}
