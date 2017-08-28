@@ -118,3 +118,33 @@ Mesmo que a máquina esteja equipada com vários módulos de I/O, o problema ain
 A memória pode oferecer uma alta quantidade de informação a mais de 10 GB/s. A latência no acesso a informação sendo na casa do nanosegundos enquanto a do disco fica na casa do milissegundo. Combinado com o preço da memória RAM, que vem se barateando, torna o argumento de computação em memória muito mais viável. Há algumas soluções para computação em memória, entre elas estão; Apache Spark, GridGrain e XAP.
 
 Isso não significa que toda a informação tem que estar na memória, se somente uma parte da informação estiver em cache na memória já significaria um grande ganho de performance.~\cite{realtime}
+
+\subsection{Hadoop}
+
+\subsection{Apache Spark}
+Apache Spark e um sistema cluster de uso geram com foco em velocidade. Ele prove uma API em Java, Scala, Python e R, e um \textit{engine} otimizada que suporta grafos de uso geral. Entres suas ferramentas ele possui um grupo de ferramentas de alto nível incluindo Spark Sql, MLlib para aprendizado de maqui, GraphX para processamento gráfico e por ultimo Spark Streaming.
+
+Abstraindo Spark em alto nível pode dizer que cada aplicação Spark consiste de um \textit{driver} que roda na função principal e executa diversas operacoes em paralelo em um \textit{cluster}. Spark também prove entre seu grupo de ferramentas ferramentas um \textit{resilient distributed dataset}(RDD), que consiste em uma coleção de elementos particionados entre diversos nodes de um \textit{cluter}. Esses elementos particionados podem ser acessadas de forma paralela. Normalmente os RDD são criados a partir de um HDFS. Pode-se escolher também hospedar esse RDD em memoria, deixando-o assim mais eficiente.
+
+Uma segunda abstração sao as variáveis compartilhadas que podem ser usadas em operacoes paralelas. Normalmente quando se inicia uma funcao em paralelo uma copia das variável e usada em cada instancia. Mas algumas vezes se quer compartilhar essas informações com todas as tarefas.
+
+\subsubsection{Spark Streaming}
+Spark Streaming e uma extercao do \textit{core} do Spark Api que habilita escalabilidade, alta disposição, tolerância a falhas de \textit{data streams}. Dados podem ser adicionados de bastantes origens  como Kafka, Flume ou ate mesmo sockets TCP como demonstrado na figura~\ref{fig:sparkstreaming}, pode ser processadas usando algoritmos complexos que podem ser expressados em funções de alto nível como \textit{map, reduce, join,} e \textit{window}. Podendo ser aplicados outros algorítimos de aprendizado de maquina e processamento de grafos do próprio Spark.~\cite{sparkstreaming}
+
+\begin{figure}[!h]
+	\caption{\label{fig:sparkstreaming} Exemplo de fonte de informação que o Spark Streaming suporta.}
+	\begin{center}
+		\includegraphics[scale=0.6]{spark_streaming}
+	\end{center}
+	\legend{Fonte: \citeauthor{sparkstreaming}, \citeyear{sparkstreaming}} 
+\end{figure}
+
+Para o \textit{streaming} de dados o Spark possui uma abstração chamada \textit{discretized stream} ou \textit{DStream}. \textit{DStream} podem ser criado a partir das fontes citados acima (kafka, Flume, etc.) ou qualquer outra fonte utilizando operacoes de alto nível. Internalmente \textit{DStreams} são uma sequencias de RDDs como demonstrado na figura~\ref{fig:sparkdstream}.
+
+\begin{figure}[!h]
+	\caption{\label{fig:sparkdstream} Representação de um \textit{DStream}.}
+	\begin{center}
+		\includegraphics[scale=0.6]{spark_dstream}
+	\end{center}
+	\legend{Fonte: \citeauthor{sparkstreaming}, \citeyear{sparkstreaming}} 
+\end{figure}
