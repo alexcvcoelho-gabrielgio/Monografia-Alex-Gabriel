@@ -155,16 +155,16 @@ A solução para esse caso pode ser dividida em dois campos, a solução que ten
 
 Muitos dos problemas tanto do MapReduce quanto do Hadoop é que seu sistema de processamento em \textit{batch} não era otimizado para uma execução rápida, e sim para processar uma quantidade grande de informação.O Hadoop é muito dependente de um disco rígido para armazenar as informações isso adiciona mais um gargalo para o \textit{startup} de uma tarefa \textit{batch}.
 
-Mesmo que a máquina esteja equipada com vários módulos de I/O, o problema ainda persistirá pois se trata de uma limitação do hardware pois qualquer requisição de I/O ainda é muito lenta para um sistema em tempo real. Uma solução elegante seria armazenar toda a informação em sistemas de memória distribuída.
+Mesmo que a máquina esteja equipada com vários módulos de I/O, o problema ainda persistirá pois se trata de uma limitação do hardware e qualquer requisição de I/O ainda é muito lenta para operações em tempo real. Uma solução elegante seria armazenar toda a informação em sistemas de memória distribuída.
 
-A memória pode oferecer uma alta quantidade de informação a mais de 10 GB/s. A latência no acesso a informação sendo na casa do nanosegundos enquanto a do disco fica na casa do milissegundo. Combinado com o preço da memória RAM, que vem se barateando, torna o argumento de computação em memória muito mais viável. Há algumas soluções para computação em memória, entre elas estão; Apache Spark, GridGrain e XAP.
+A memória pode oferecer uma alta quantidade de informação a mais de 10 GB/s. A latência no acesso a informação sendo na casa do nanosegundos enquanto a do disco fica na casa do milissegundo. Combinado com o preço da memória RAM, que vem ficando mais barato, torna o argumento de computação em memória muito mais viável. Há algumas soluções para computação em memória, entre elas estão; Apache Spark, GridGrain e XAP.
 
-Isso não significa que toda a informação tem que estar na memória, se somente uma parte da informação estiver em cache na memória já significaria um grande ganho de performance.~\cite{realtime}
+Computação em momoria não significa que toda a informação tem que estar na memória, mas se somente uma parte da informação estiver em cache na memória já significaria um grande ganho de performance.~\cite{realtime}
 
 \subsection{Hadoop}
 Hadoop em resumo é uma biblioteca para sistemas processamento distribuído de grande quantidade de informação entre \textit{clusters} de computares usando modelos simples de programação. Ele é desenvolvido para escalar de um simples computador para milhares, onde cada um pode oferecer sua própria unidade de computação e armazenamento.~\cite{hadoop}
 
-Hadoop pode resolver diversos problemas no campo de \textit{Big Data} oferecendo velocidade e variedade como discutido nos 5Vs. Haddoop pode ser divido em 4 etapas:~\cite{hadoopessentials}
+Hadoop pode resolver diversos problemas no campo de \textit{Big Data} oferecendo velocidade e variedade como discutido nos 5Vs. O fluxo do Haddoop pode ser separado em 4 etapas:~\cite{hadoopessentials}
 
 \begin{itemize}
 \item \textbf{Captura dos dados:} as fontes de dados é extensiva e pode ser tando estruturada, semi-estruturada, e até \textit{streaming} de dados (tempo real). Estendendo também para sensores e diversos dispositivos. Tendo integração com diversas fontes de dados como Flume, Storm, e outros fontes de dados do sistema Hadoop.
@@ -179,7 +179,7 @@ Hadoop pode resolver diversos problemas no campo de \textit{Big Data} oferecendo
 		\legend{Fonte: \citeauthor{hadoopessentials}, \citeyear{hadoopessentials}} 
 \end{figure}
 
-\item \textbf{Distribuição:} apos o tratamento de dados o dados pode ser distribuído para ser utilizado pela área de BI (\textit{Business Intelligence}), e outros sistemas de analises podem consultar os dados.
+\item \textbf{Distribuição:} apos tratamento o dados podem ser distribuído para serem utilizado pela área de BI (\textit{Business Intelligence}), e outros sistemas de analise podem consultar os dados.
 	
 \item \textbf{\textit{Feedback}}: trata-se de analisar os dados e auditar para futuras melhoras no sistema \textit{Big Data}.
 \end{itemize}
@@ -196,7 +196,7 @@ A figura ~\ref{fig:hadoopflow} mostra como o dado e capturado e então processad
 
 
 \subsection{Apache Spark}
-Apache Spark é um sistema \textit{cluster} de uso geral com foco em velocidade. Ele provê APIs em Java, Scala, Python e R, e um \textit{engine} otimizada que suporta grafos de uso geral. Entres suas bibliotecas ele possui um grupo de ferramentas de alto nível incluindo Spark Sql, MLlib para aprendizado de maquina, GraphX para processamento gráfico e também Spark Streaming para processamento de dados em tempo real.
+Apache Spark é um sistema \textit{cluster} de uso geral com foco em velocidade. Ele provê APIs em Java, Scala, Python e R, e um \textit{engine} otimizada que suporta grafos de uso geral. Entres suas bibliotecas ele possui um grupo de ferramentas de alto nível incluindo Spark Sql, MLlib para aprendizado de maquina, GraphX para processamento de grafos e também Spark Streaming para processamento de dados em tempo real.
 
 Abstraindo Spark em um alto nível pode-se dizer que cada aplicação Spark consiste de um \textit{driver} que roda na função principal e executa diversas operações em paralelo em um \textit{cluster}. Spark também provê entre seu grupo de  ferramentas um \textit{resilient distributed dataset}(RDD), que consiste em uma coleção de elementos particionados entre diversos nós de um \textit{cluster}. Esses elementos particionados podem ser acessadas de forma paralela. Normalmente os RDD são criados a partir de um HDFS. Pode-se escolher também hospedar esse RDD em memoria, deixando-o assim mais eficiente.
 
