@@ -1,8 +1,14 @@
 \chapter{Especificações e Arquitetura do Sistema}
 \label{chap:arquitetura}
-Apresentar o diagrama de caso de uso do sistema, juntamente com a descrição do funcionamento do sistema como um todo, mostrando os requisitos dos usuários que serão afetados por esta tecnologia.
+Durante todo o desenvolvimento do sistema, buscou-se não se utilizar dos modelos de arquitetura comumente empregados neste tipo de aplicação, que trabalham com grandes volumes de dados, um dos motivos vem a ser pela grande complexidade encontrada ao se trabalhar com módulos Apache como o Hadoop Common, Hadoop Distributed File System (HDFS), Hadoop YARN e Hadoop MapReduce, os quais dependendo de suas aplicações acabam por gerar dependências de outras ferramentas como Cassandra, Spark, ZooKeeper, entre outras que se mostram apesar de robustas, muito complexas e com uma curva de aprendizagem alta demais para serem usadas de imediato.
 
-Apresentação do esquema de funcionamento do sistema, mostrando aonde estará empregada cada tecnologia utilizada no sistema. Juntamente será apresentado os tipos de dados trafegados pelas interfaces presentes, mostrando uma arquitetura distribuída e a integração das partes desta.
+Outro motivo de grande valor para o desenvolvimento de uma nova arquitetura tem sido a empregabilidade de novas ferramentas utilizadas no lado \textit{backend}, por assim dizer, relacionado a organização dentro dos servidores, conceitos de desenvolvimento e bancos de dados que tem ganhado força dentro do mercado e se mostradas bem aplicáveis em projetos com grandes volumes de dados e alta disponibilidade, além de possuir uma baixa curva de aprendizagem, se comparadas com as tecnologias tradicionais.
+
+\section{Docker}
+\label{sec:docker}
+Docker é uma ferramenta criada sob os conceitos de conteinerização de aplicações, mudando os processos realizados pelos profissionais de infraestrutura, em que, de forma tradicional era criava-se um servidor no qual se instalava todas as ferramentas exigidas pela aplicação para que ela funcionasse corretamente, despendendo de horas de trabalho para tal feito. Com o uso do Docker a aplicação está contida dentro de um contêiner, podendo se relacionar ou não com outros contêineres, desta forma se tem a imagem do contêiner na qual está contida todos os arquivos e configurações necessárias para que uma instância da aplicação seja colocada em funcionamento.
+
+Esta ferramenta é comumente comparada com a criação de máquinas virtuais, pois assim como estas, em uma única máquina é possível se ter várias divisões dos processos.
 
 \section{Tecnologias}
 \label{sec:tecnologias}

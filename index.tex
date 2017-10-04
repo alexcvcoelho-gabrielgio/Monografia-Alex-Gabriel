@@ -40,7 +40,7 @@
 	section=TITLE,		% títulos de seções convertidos em letras maiúsculas
 	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
 	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
-	sumario=tradicional % opção de sumário
+	sumario=abnt-6027-2012 % opção de sumário
 	% -- opções do pacote babel --
 	english,			% idioma adicional para hifenização
 	french,				% idioma adicional para hifenização
@@ -111,7 +111,8 @@
 exigência parcial para a obtenção do diploma de graduação em Engenharia da Computação.}
 % ---
 
-
+\counterwithin{figure}{section}
+\counterwithin{table}{section}
 % ---
 % Configurações de aparência do PDF final
 
@@ -170,7 +171,7 @@ exigência parcial para a obtenção do diploma de graduação em Engenharia da 
 % ----------------------------------------------------------
 \pretextual
 
-%\includepdf{alex.pdf}
+%\includepdf{report5.pdf}
 
 
 % ---
@@ -319,7 +320,7 @@ exigência parcial para a obtenção do diploma de graduação em Engenharia da 
 % ---
 \include{textuais/capitulos/capitulo1}
 \include{textuais/capitulos/capitulo2}
-%\include{textuais/capitulos/capitulo3}
+\include{textuais/capitulos/capitulo3}
 %\include{textuais/capitulos/capitulo4}
 
 
