@@ -6,13 +6,28 @@ Outro motivo de grande valor para o desenvolvimento de uma nova arquitetura tem 
 
 \section{Docker}
 \label{sec:docker}
-Docker é uma ferramenta criada sob os conceitos de conteinerização de aplicações, mudando os processos realizados pelos profissionais de infraestrutura, em que, de forma tradicional era criava-se um servidor no qual se instalava todas as ferramentas exigidas pela aplicação para que ela funcionasse corretamente, despendendo de horas de trabalho para tal feito. Com o uso do Docker a aplicação está contida dentro de um contêiner, podendo se relacionar ou não com outros contêineres, desta forma se tem a imagem do contêiner na qual está contida todos os arquivos e configurações necessárias para que uma instância da aplicação seja colocada em funcionamento.
+O Docker é uma plataforma aberta criada com o intuito de tornar mais ágil o desenvolvimento, implantação e execução de aplicações em ambientes isolados, além de ser multiplataforma, tudo isso através do conceito de conteinerização e imagens, em que numa imagem se tem todos os arquivos necessários para a criação de um contêiner, este por sua vez, possui a aplicação encapsulada  e funcionando.
 
-Esta ferramenta é comumente comparada com a criação de máquinas virtuais, pois assim como estas, em uma única máquina é possível se ter várias divisões dos processos.
+Desta forma se tem uma grande flexibilidade para trabalhar com as aplicações, pois estas irão funcionar tanto em um notebook, quanto em um mainframe. Este conceito de contêiner se assimila ao processo de criação de máquinas virtuais, onde se tem todo o sistema operacional virtualizado, já o Docker realiza uma virtualização á nível do sistema operacional, mantendo um único kernel no \textit{host} executando processos (contêineres) de forma isolada, isso é possível através do uso de \textit{namespaces}, fazendo com que um processo só tenha acesso a recursos de outro se isso for explicitamente configurado na criação dos ambientes. Para que não ocorra a exaustão de recursos no \textit{host} o Docker se utiliza de \textit{cgroups} do kernel, responsável por criar limites de hardware para os processos, evitando o uso exagerado de recursos por apenas um processo. A figura \ref{fig:arqdocker} apresenta a organização a nível de sistema operacional de um \textit{host} utilizando Docker.~\cite{docker}
+
+\begin{figure}[!h]
+\caption{\label{fig:arqdocker} Arquitetura Docker}
+\begin{center}
+\includegraphics[scale=0.3]{arqdocker}
+\end{center}
+\legend{Fonte: \citeauthor{docker}, \citeyear{docker}} 
+\end{figure}
+
+O Docker tem ganhado fama no mercado, principalmente pelos profissionais de infraestrutura, pois ele tem facilitado o trabalho destas pessoas, pois o trabalho despendido para realizar a instalação de um software foi reduzido, não necessitando mais se preocupar com todas as dependências e ferramentas necessárias para o funcionamento do software, basta apenas se utilizar uma imagem da aplicação e transformá-la em um contêiner.
+
+\subsection{Docker Compose}
+O Docker Compose trabalha juntamente com o Docker, ele se caracteriza por definir e executar múltiplos contêineres, pois através do uso de um arquivo que descreve todos os contêineres e configurações necessárias para o funcionamento de uma aplicação por completa, o Docker Compose tem a capacidade de criá-los, reiniciá-los e desligá-los quando necessário, facilitando assim o uso de contêineres.
 
 \section{Tecnologias}
 \label{sec:tecnologias}
 Mostrar de forma específica cada tecnologia que será empregada
+\subsection{Micro Serviços}
+Falar sobre
 
 \subsection{Clojure}
 Apresentar a linguagem de programação \textit{Clojure} e como ela é empregada no trabalho.
