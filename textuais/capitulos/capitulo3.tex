@@ -10,7 +10,7 @@ Os Micros Serviços tem se tornado um padrão de projeto muito utilizado em apli
 
 %A escolha do desenvolvimento neste padrão se deve ao fato de ser fácil escalável e ter um grande reaproveitamento de código, sem contar o paralelismo na execução de tarefas
 
-\section{Docker}
+\section{Docker Engine}
 \label{sec:docker}
 O Docker é uma plataforma aberta criada com o intuito de tornar mais ágil o desenvolvimento, implantação e execução de aplicações em ambientes isolados, além de ser multiplataforma, tudo isso através do conceito de conteinerização e imagens, em que numa imagem se tem todos os arquivos necessários para a criação de um contêiner, este por sua vez, possui a aplicação encapsulada  e funcionando.
 
@@ -24,10 +24,10 @@ Desta forma se tem uma grande flexibilidade para trabalhar com as aplicações, 
 \legend{Fonte: \citeauthor{docker}, \citeyear{docker}} 
 \end{figure}
 
-O Docker tem ganhado fama no mercado, principalmente pelos profissionais de infraestrutura, pois ele tem facilitado o trabalho destas pessoas, fazendo com que elas economizem tempo para realizar a instalação de um software, não necessitando mais se preocupar com todas as dependências e ferramentas necessárias para o funcionamento do software, basta apenas se utilizar uma imagem da aplicação e transformá-la em um contêiner em qualquer ambiente que se esteja.
+O Docker tem ganhado fama no mercado, principalmente pelos profissionais de infraestrutura, pois ele tem facilitado o trabalho destas pessoas, fazendo com que elas economizem tempo para realizar a instalação de um software, não necessitando mais se preocupar com todas as dependências e ferramentas necessárias para o funcionamento do software, basta apenas se utilizar uma imagem da aplicação e transformá-la em um contêiner em qualquer ambiente que se esteja. Comumente o Docker não é utilizado isoladamente, pois o que traz a ele grande facilidade ao se trabalhar com contêineres é a junção de todas as suas ferramentas, as quais serão descritas a seguir.~\cite{docker}
 
 \subsection{Docker Compose}
-Com o aumento da complexidade do ambiente em que se está hospedada a aplicação, surgem as necessidades de se criar mais contêineres, tornando o seu gerenciamento um tanto quanto complicado, é neste cenário que se aplica o Docker Compose, uma ferramenta que trabalha juntamente com o Docker, ele se caracteriza por definir e executar múltiplos contêineres, pois através do uso de um arquivo que descreve todos os contêineres e configurações necessárias para o funcionamento de uma aplicação por completa, como pode ser visto um exemplo deste arquivo na figura \ref{fig:arqdockercompose}, o Docker Compose tem a capacidade de criá-los, reiniciá-los e desligá-los quando necessário, facilitando assim o uso de contêineres.
+Com o aumento da complexidade do ambiente em que se está hospedada a aplicação, surgem as necessidades de se criar mais contêineres, tornando o seu gerenciamento um tanto quanto complicado, é neste cenário que se aplica o Docker Compose, uma ferramenta que trabalha juntamente com o Docker, ele se caracteriza por definir e executar múltiplos contêineres, pois através do uso de um arquivo que descreve todos os contêineres e configurações necessárias para o funcionamento de uma aplicação por completa, como pode ser visto um exemplo deste arquivo na figura \ref{fig:arqdockercompose}, o Docker Compose tem a capacidade de criá-los, reiniciá-los e desligá-los quando necessário, facilitando assim o uso de contêineres.~\cite{docker}
 
 \begin{figure}[!h]
 \caption{\label{fig:arqdockercompose} Arquivo Docker Compose}
@@ -38,20 +38,37 @@ Com o aumento da complexidade do ambiente em que se está hospedada a aplicaçã
 \end{figure}
 
 \subsection{Docker Swarm}
-Balanceamento entre contêineres
+Como visto até aqui, Docker Engine é o responsável pela arquitetura de criar e manter em funcionamento os contêineres, além de armazenar as imagens, o Docker Compose leva a responsabilidade da criação e remoção de múltiplos contêineres, facilitando o gerenciamento destes, por fim se tem o Docker Swarm a qual tem a função de gerenciar o \textit{cluster} de contêineres, ele pode ser considerado como um orquestrador de contêineres como mostra a figura \ref{fig:dockerswarm}, especificando quais máquinas e contêineres farão parte deste \textit{cluster}, sendo que muitos destes contêineres podem terem sidos criados a partir de um Docker Compose.   
+
+\begin{figure}[!h]
+\caption{\label{fig:dockerswarm} Docker Swarm}
+\begin{center}
+\includegraphics[scale=0.5]{dockerswarm}
+\end{center}
+\legend{Fonte: \citeauthor{dockerswarm}, \citeyear{dockerswarm}} 
+\end{figure}
+
+
+É o Docker Swarm que aplica todo o conceito de escalabilidade à aplicação conteinerizada, pois ela tem a capacidade de criar novas réplicas de contêineres de acordo com a necessidade, ou até os limites pré estabelecidos, é ele também que aplica o conceito de distribuição de cargas entre os contêineres que estão em funcionamento, podendo estes estarem na mesma máquina ou não, no caso de estarem em outra máquina o gerenciamento do Docker Swarm só é possível através da troca de \textit{tokens} entre elas formando um \textit{cluster} com contêineres homogêneos ou heterogêneos. É desta forma que é criado todo o ecossistema da arquitetura Docker, como pode ser visto na figura \ref{fig:ecossistemadocker}.~\cite{dockerswarm}  
+
+\begin{figure}[!h]
+\caption{\label{fig:ecossistemadocker} Ecossistema Docker}
+\begin{center}
+\includegraphics[scale=0.5]{ecossistemadocker}
+\end{center}
+\legend{Fonte: \citeauthor{dockerswarm}, \citeyear{dockerswarm}} 
+\end{figure}
 
 \section{Redis}
 \label{sec:redis}
 Redis é um banco de dados No-SQL destinado ao armazenamento em memória de dados no tipo chave-valor, utilizado para manter cache das aplicações, nesse cache podem ser armazenados \textit{hashs}, \textit{strings}, \textit{bitmaps}, listas e \textit{Hyperloglogs}, estes dados tem uma data de expiração após serem persistidos no Redis, por ser um banco de dados em memória, as ações de escrita e leitura se tornam mais rápidas do que uma leitura ou escrita em disco, dando maior \textit{performance} ás aplicações nas quais ele é implantado.~\cite{da2015redis}
 
-\section{Tecnologias}
-\label{sec:tecnologias}
-Mostrar de forma específica cada tecnologia que será empregada
+\section{Clojure}
+Apresentada ao público em 2007 ela foi desenvolvida visando a construção de aplicações multitarefa, aproveitando os recursos da máquina virtual Java (JVM), mas diferente do Java em que se escreve códigos orientado a objetos, em Clojure se tem códigos escritos em linguagem funcional, em que cada função é especializada em sua tarefa, sendo que a resolução de problemas se dá pela integração destas funções.
 
-\subsection{Clojure}
-Apresentar a linguagem de programação \textit{Clojure} e como ela é empregada no trabalho.
+Algo que faz Clojure uma linguagem diferente das outras é que valores são imutáveis, isso resolve o problema que se tem de compartilhamento de memória quando usada várias \textit{threads}, outra funcionalidade interessante é a criação de macros, que é o equivalente a criar novas funcionalidades dentro da linguagem, algo muito útil para adequar a linguagem ao problema a ser solucionado. Além de tudo assim como o Ruby possuí o gerenciador de pacotes rake e o Java o Maven, Clojure possui o Leiningen, que gerencia os pacotes necessários para o seu funcionamento, além de disponibilizar um \textit{prompt} de comando para teste de trechos de código, similar ao pip do Python.~\cite{hickey2010clojure}
 
-\subsection{Kafka}
+\section{Kafka}
 Apresentar seu uso para realizar funções em tempo real dentro do sistema, bem como seu funcionamento.
 
 \subsection{MongoDB}
