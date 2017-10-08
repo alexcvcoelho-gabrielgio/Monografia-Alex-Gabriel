@@ -8,7 +8,18 @@ Outro motivo de grande valor para o desenvolvimento de uma nova arquitetura tem 
 \label{sec:microserviços}
 Os Micros Serviços tem se tornado um padrão de projeto muito utilizado em aplicações de multiplataforma, pois através deste padrão este tipo de aplicação tem se tornado mais fácil de se desenvolver, demandando menos tempo. A ideia do padrão de Micro Serviços é desenvolver pequenos serviços autônomos que trabalham juntos, ou seja, um serviço possui uma única responsabilidade bem definida, mas para o funcionamento da aplicação por completa é necessário o uso de todos os serviços disponíveis dentro do domínio da aplicação. Considerando que um serviço venha a ser um \textit{endpoint} de uma \textit{Application Programming Interface} (API), que pode informações como todos os dados de uma tabela.~\cite{newman2015building}
 
-%A escolha do desenvolvimento neste padrão se deve ao fato de ser fácil escalável e ter um grande reaproveitamento de código, sem contar o paralelismo na execução de tarefas
+\section{CQRS}
+O \textit{Command Query Responsibility Segregation} (CQRS) é um padrão de desenvolvimento que descreve como separar as operações de leitura e escrita em diferentes modelos, sendo que para a leitura é utilizada a \textit{Query model} e para outros comandos como atualização e inserção de dados é utilizado o \textit{Command Model}, os quais compartilham da mesma base de dados, como mostra a figura \ref{fig:cqrs}.
+
+\begin{figure}[!h]
+\caption{\label{fig:cqrs} Arquitetura CQRS}
+\begin{center}
+\includegraphics[scale=0.5]{cqrs}
+\end{center}
+\legend{Fonte: \citeauthor{cqrs}, \citeyear{cqrs}} 
+\end{figure}
+
+Este padrão foi desenvolvido tendo em vista que ao se criar novas regras de leitura e escrita, novas formas de representação das informações são criadas, o que já não faz mais sentido manter em um único modelo quando se fala em responsabilidade única, este é um padrão que adiciona grande complexidade ao projeto, portanto só deve ser utilizado caso as regras empregadas na leitura e escrita passem a ser complexas, não havendo um padrão fixo para todos os casos, é necessário adaptá-la ao problema que se deseja resolver.~\cite{cqrs}
 
 \section{Docker Engine}
 \label{sec:docker}
@@ -92,8 +103,22 @@ Além da organização das mensagens dentro de partições, se tem ainda a organ
 \end{figure}
 
 \section{MongoDB}
+MongoDB é um banco de dados orientado a documento, organizado em coleções de dados, aos quais se permitem operações de leitura e escrita, substituindo o conceito de linhas dos bancos relacionais por documentos, uma das grandes vantagens deste modelo é a fácil escalabilidade possível de se empregar, além da grande flexibilidade que se tem, pois não são pré-definidos identificadores, tamanhos ou tipos de dados para os documentos armazenados.
+
+Dentre as funcionalidades dele se destacam a indexação através de texto o que mantêm uma boa \textit{performance} na execução de \textit{queries}, agregações complexas através de pedaços mais simples de código, tipos especiais de coleções suportando tamanhos fixos, suporta também o armazenamento de grandes documentos além de metadados. Seu funcionamento difere aos de bancos relacionais por não possibilitar as funções como \textit{joins}, ou seja, para utilizá-la é preciso que se armazene dados completos em um único objeto, pois quando se tenta utilizá-lo similar a um banco relacional toda a \textit{performance} da ferramenta quanto as buscas se perde.~\cite{chodorow2013mongodb}
+
+\section{Datomic}
+Assim como o MongoDB ele é um banco de dados não relacional, mas com um conceito diferente, adaptado para as novas demandas de serviços em nuvem com arquitetura \textit{Software as a Service} (SaaS), Datomic é um banco de dados orientado a fatos, com o grande diferencial de que dados nele persistidos se tornam imutáveis, isto não significa que não se pode alterar dados, mas o que acontece é um versionamento dos dados, desta forma é possível se ter um histórico do objeto persistido com todas as alterações já realizadas sendo a última versão o dado de maior veracidade.  
+
+Possui como características separação dos conceitos de leitura e escrita, forte garantia transacional na escrita, noções de imutabilidade expressas por bases de dados estritamente incrementais, utiliza para as consultas de dados a linguagem Datalog, como é mostrado um exemplo da linguagem na figura \ref{fig:datalog} que é estruturada baseada em lógica permitindo consultas complexas incluindo \textit{joins} inferidos.~\cite{datomic} 
+
+\begin{figure}[!h]
+\caption{\label{fig:datalog} Exemplo da linguagem Datalog}
+\begin{center}
+\includegraphics[scale=0.6]{datalog}
+\end{center}
+\legend{Fonte: \citeauthor{datomic}, \citeyear{datomic}} 
+\end{figure}
 
 
-\subsection{Datomic}
-Apresentar uma nova forma de armazenar dados, se utilizando de histórico, sempre mantendo o estado anterior dos dados.
 
