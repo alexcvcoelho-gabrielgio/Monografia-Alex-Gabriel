@@ -69,10 +69,30 @@ Apresentada ao público em 2007 ela foi desenvolvida visando a construção de a
 Algo que faz Clojure uma linguagem diferente das outras é que valores são imutáveis, isso resolve o problema que se tem de compartilhamento de memória quando usada várias \textit{threads}, outra funcionalidade interessante é a criação de macros, que é o equivalente a criar novas funcionalidades dentro da linguagem, algo muito útil para adequar a linguagem ao problema a ser solucionado. Além de tudo assim como o Ruby possuí o gerenciador de pacotes rake e o Java o Maven, Clojure possui o Leiningen, que gerencia os pacotes necessários para o seu funcionamento, além de disponibilizar um \textit{prompt} de comando para teste de trechos de código, similar ao pip do Python.~\cite{hickey2010clojure}
 
 \section{Kafka}
-Apresentar seu uso para realizar funções em tempo real dentro do sistema, bem como seu funcionamento.
+O Kafka se caracteriza por ser uma central de mensagens distribuída, em que todos as informações passam por ele antes de alimentarem um banco de dados, Data Warehouse ou algum outro sistema de análise de dados, dentre as suas vantagens estão a sua rapidez, alta escalabilidade e redundância, permite uma grande quantidade de conexões persistentes dos usuários , além de apresentar uma grande resiliência tendo a capacidade de se recuperar após a ocorrência de falhas. Desta forma o Kafka se torna ideal para comunicação e integração de componentes em sistemas de larga escala.
 
-\subsection{MongoDB}
-Apresentar as características do banco NoSQL seu uso e diferenças entre um banco SQL, bem como seus pontos positivos.
+Seu funcionamento se dá através de partições sobre tópicos diferentes (como se fossem mensagens relacionadas a cada assunto, ou ainda pode-se comparar a tabelas de um banco relacional) que podem estar em diferentes máquinas, estas partições armazenam uma fila de mensagens, tendo cada uma delas um número identificador imutável que segue a ordem da fila, um consumidor dessa fila de mensagens tem a possibilidade de ler qualquer mensagem que esteja na fila através o seu identificador, um consumidor também pode consumir mensagens de diversas partições como mostra na figura \ref{fig:kafkatopicos}. As mensagens que chegam ao Kafka ficam armazenadas por um período de tempo configurável, não possuindo algo que informe se a mensagem foi lida ou não, apenas mantém pelo período estabelecido, caso o período seja menor ao período em que será feita a leitura pelo consumidor, essa mensagem será perdida
+
+\begin{figure}[!h]
+\caption{\label{fig:kafkatopicos} Partições do Kafka}
+\begin{center}
+\includegraphics[scale=0.7]{kafkatopicos}
+\end{center}
+\legend{Fonte: \citeauthor{kafka}, \citeyear{kafka}} 
+\end{figure}
+
+Além da organização das mensagens dentro de partições, se tem ainda a organização de partições dentro de \textit{brokers}, onde se tem partições  chamadas de líderes e réplicas, no processo de produção de mensagens como apresentado na figura \ref{fig:kafkaproducao} o produtor escreve na partição líder, esta então gera cópia nas partições réplicas que podem estar em outros \textit{brokers} e em outras máquinas, desta forma se mantêm a consistência das mensagens e um alto nível de paralelismo, pois no processo de leitura o consumidor faz uma requisição para ler e a partição que está disponível retorna a mensagem para ele.~\cite{kafka}
+
+\begin{figure}[!h]
+\caption{\label{fig:kafkaproducao} Processo de escrita do Kafka}
+\begin{center}
+\includegraphics[scale=0.5]{kafkaproducao}
+\end{center}
+\legend{Fonte: \citeauthor{kafka}, \citeyear{kafka}} 
+\end{figure}
+
+\section{MongoDB}
+
 
 \subsection{Datomic}
 Apresentar uma nova forma de armazenar dados, se utilizando de histórico, sempre mantendo o estado anterior dos dados.
