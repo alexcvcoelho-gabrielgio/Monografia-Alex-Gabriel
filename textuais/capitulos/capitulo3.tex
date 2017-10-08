@@ -6,7 +6,7 @@ Outro motivo de grande valor para o desenvolvimento de uma nova arquitetura tem 
 
 \section{Micro Serviços}
 \label{sec:microserviços}
-Os Micros Serviços tem se tornado um padrão de projeto muito utilizado em aplicações de multiplataforma, pois através deste padrão este tipo de aplicação tem se tornado mais fácil de se desenvolver, demandando menos tempo. A ideia do padrão de Micro Serviços é desenvolver pequenos serviços autônomos que trabalham juntos, ou seja, um serviço possui uma única responsabilidade bem definida, mas para o funcionamento da aplicação por completa é necessário o uso de todos os serviços disponíveis dentro do domínio da aplicação. Considerando que um serviço venha a ser um \textit{endpoint} de uma \textit{Application Programming Interface} (API), que pode informações como todos os dados de uma tabela.~\cite{newman2015building}
+Os Micros Serviços tem se tornado um padrão de projeto muito utilizado em aplicações de multiplataforma, pois através deste padrão este tipo de aplicação tem se tornado mais fácil de se desenvolver, demandando menos tempo. A ideia do padrão de Micro Serviços é desenvolver pequenos serviços autônomos que trabalham juntos, ou seja, um serviço possui uma única responsabilidade bem definida, mas para o funcionamento da aplicação por completa é necessário o uso de todos os serviços disponíveis dentro do domínio da aplicação. Sendo assim, um serviço pode ser um \textit{endpoint} de uma \textit{Application Programming Interface} (API), que pode retornar informações como todos os dados de uma tabela.~\cite{newman2015building}
 
 \section{CQRS}
 O \textit{Command Query Responsibility Segregation} (CQRS) é um padrão de desenvolvimento que descreve como separar as operações de leitura e escrita em diferentes modelos, sendo que para a leitura é utilizada a \textit{Query model} e para outros comandos como atualização e inserção de dados é utilizado o \textit{Command Model}, os quais compartilham da mesma base de dados, como mostra a figura \ref{fig:cqrs}.
@@ -25,7 +25,7 @@ Este padrão foi desenvolvido tendo em vista que ao se criar novas regras de lei
 \label{sec:docker}
 O Docker é uma plataforma aberta criada com o intuito de tornar mais ágil o desenvolvimento, implantação e execução de aplicações em ambientes isolados, além de ser multiplataforma, tudo isso através do conceito de conteinerização e imagens, em que numa imagem se tem todos os arquivos necessários para a criação de um contêiner, este por sua vez, possui a aplicação encapsulada  e funcionando.
 
-Desta forma se tem uma grande flexibilidade para trabalhar com as aplicações, pois estas irão funcionar tanto em um notebook, quanto em um mainframe. Este conceito de contêiner se assimila ao processo de criação de máquinas virtuais, onde se tem todo o sistema operacional virtualizado, já o Docker realiza uma virtualização á nível do sistema operacional, mantendo um único kernel no \textit{host} executando processos (contêineres) de forma isolada, isso é possível através do uso de \textit{namespaces}, fazendo com que um processo só tenha acesso a recursos de outro se isso for explicitamente configurado na criação dos ambientes. Para que não ocorra a exaustão de recursos no \textit{host} o Docker se utiliza de \textit{cgroups} do kernel, responsável por criar limites de hardware para os processos, evitando o uso exagerado de recursos por apenas um processo. A figura \ref{fig:arqdocker} apresenta a organização a nível de sistema operacional de um \textit{host} utilizando Docker.~\cite{docker}
+Desta forma se tem uma grande flexibilidade para trabalhar com as aplicações, pois estas irão funcionar tanto em um notebook, quanto em um mainframe. Este conceito de contêiner se assimila ao processo de criação de máquinas virtuais, onde se tem todo o sistema operacional virtualizado, já o Docker realiza uma virtualização á nível do sistema operacional, mantendo um único kernel no \textit{host} executando processos (contêineres) de forma isolada, isso é possível através do uso de \textit{namespaces}, fazendo com que um processo só tenha acesso a recursos de outro se isso for explicitamente configurado na criação dos ambientes. Para que não ocorra a exaustão de recursos no \textit{host}, o Docker se utiliza de \textit{cgroups} do kernel, responsável por criar limites de hardware para os processos, evitando o uso exagerado de recursos por apenas um processo. A figura \ref{fig:arqdocker} apresenta a organização a nível de sistema operacional de um \textit{host} utilizando Docker.~\cite{docker}
 
 \begin{figure}[!h]
 \caption{\label{fig:arqdocker} Arquitetura Docker}
@@ -38,15 +38,7 @@ Desta forma se tem uma grande flexibilidade para trabalhar com as aplicações, 
 O Docker tem ganhado fama no mercado, principalmente pelos profissionais de infraestrutura, pois ele tem facilitado o trabalho destas pessoas, fazendo com que elas economizem tempo para realizar a instalação de um software, não necessitando mais se preocupar com todas as dependências e ferramentas necessárias para o funcionamento do software, basta apenas se utilizar uma imagem da aplicação e transformá-la em um contêiner em qualquer ambiente que se esteja. Comumente o Docker não é utilizado isoladamente, pois o que traz a ele grande facilidade ao se trabalhar com contêineres é a junção de todas as suas ferramentas, as quais serão descritas a seguir.~\cite{docker}
 
 \subsection{Docker Compose}
-Com o aumento da complexidade do ambiente em que se está hospedada a aplicação, surgem as necessidades de se criar mais contêineres, tornando o seu gerenciamento um tanto quanto complicado, é neste cenário que se aplica o Docker Compose, uma ferramenta que trabalha juntamente com o Docker, ele se caracteriza por definir e executar múltiplos contêineres, pois através do uso de um arquivo que descreve todos os contêineres e configurações necessárias para o funcionamento de uma aplicação por completa, como pode ser visto um exemplo deste arquivo na figura \ref{fig:arqdockercompose}, o Docker Compose tem a capacidade de criá-los, reiniciá-los e desligá-los quando necessário, facilitando assim o uso de contêineres.~\cite{docker}
-
-\begin{figure}[!h]
-\caption{\label{fig:arqdockercompose} Arquivo Docker Compose}
-\begin{center}
-\includegraphics[scale=0.5]{arqdockercompose}
-\end{center}
-\legend{Fonte: \citeauthor{docker}, \citeyear{docker}} 
-\end{figure}
+Com o aumento da complexidade do ambiente em que se está hospedada a aplicação, surgem as necessidades de se criar mais contêineres, tornando o seu gerenciamento um tanto quanto complicado, é neste cenário que se aplica o Docker Compose, uma ferramenta que trabalha juntamente com o Docker, ele se caracteriza por definir e executar múltiplos contêineres, pois através do uso de um arquivo que descreve todos os contêineres e configurações necessárias para o funcionamento de uma aplicação por completa, o Docker Compose tem a capacidade de criá-los, reiniciá-los e desligá-los quando necessário, facilitando assim o uso de contêineres.~\cite{docker}
 
 \subsection{Docker Swarm}
 Como visto até aqui, Docker Engine é o responsável pela arquitetura de criar e manter em funcionamento os contêineres, além de armazenar as imagens, o Docker Compose leva a responsabilidade da criação e remoção de múltiplos contêineres, facilitando o gerenciamento destes, por fim se tem o Docker Swarm a qual tem a função de gerenciar o \textit{cluster} de contêineres, ele pode ser considerado como um orquestrador de contêineres como mostra a figura \ref{fig:dockerswarm}, especificando quais máquinas e contêineres farão parte deste \textit{cluster}, sendo que muitos destes contêineres podem terem sidos criados a partir de um Docker Compose.   
@@ -80,9 +72,9 @@ Apresentada ao público em 2007 ela foi desenvolvida visando a construção de a
 Algo que faz Clojure uma linguagem diferente das outras é que valores são imutáveis, isso resolve o problema que se tem de compartilhamento de memória quando usada várias \textit{threads}, outra funcionalidade interessante é a criação de macros, que é o equivalente a criar novas funcionalidades dentro da linguagem, algo muito útil para adequar a linguagem ao problema a ser solucionado. Além de tudo assim como o Ruby possuí o gerenciador de pacotes rake e o Java o Maven, Clojure possui o Leiningen, que gerencia os pacotes necessários para o seu funcionamento, além de disponibilizar um \textit{prompt} de comando para teste de trechos de código, similar ao pip do Python.~\cite{hickey2010clojure}
 
 \section{Kafka}
-O Kafka se caracteriza por ser uma central de mensagens distribuída, em que todos as informações passam por ele antes de alimentarem um banco de dados, Data Warehouse ou algum outro sistema de análise de dados, dentre as suas vantagens estão a sua rapidez, alta escalabilidade e redundância, permite uma grande quantidade de conexões persistentes dos usuários , além de apresentar uma grande resiliência tendo a capacidade de se recuperar após a ocorrência de falhas. Desta forma o Kafka se torna ideal para comunicação e integração de componentes em sistemas de larga escala.
+O Kafka se caracteriza por ser uma central de mensagens distribuídas, em que todas as informações passam por ele antes de alimentarem um banco de dados, Data Warehouse ou algum outro sistema de análise de dados, dentre as suas vantagens estão a sua rapidez, alta escalabilidade e redundância, permite uma grande quantidade de conexões persistentes dos usuários , além de apresentar uma grande resiliência tendo a capacidade de se recuperar após a ocorrência de falhas. Desta forma o Kafka se torna ideal para comunicação e integração de componentes em sistemas de larga escala.
 
-Seu funcionamento se dá através de partições sobre tópicos diferentes (como se fossem mensagens relacionadas a cada assunto, ou ainda pode-se comparar a tabelas de um banco relacional) que podem estar em diferentes máquinas, estas partições armazenam uma fila de mensagens, tendo cada uma delas um número identificador imutável que segue a ordem da fila, um consumidor dessa fila de mensagens tem a possibilidade de ler qualquer mensagem que esteja na fila através o seu identificador, um consumidor também pode consumir mensagens de diversas partições como mostra na figura \ref{fig:kafkatopicos}. As mensagens que chegam ao Kafka ficam armazenadas por um período de tempo configurável, não possuindo algo que informe se a mensagem foi lida ou não, apenas mantém pelo período estabelecido, caso o período seja menor ao período em que será feita a leitura pelo consumidor, essa mensagem será perdida
+Seu funcionamento se dá através de partições sobre tópicos diferentes (como se fossem mensagens relacionadas a cada assunto, ou ainda pode-se comparar as tabelas de um banco relacional) que podem estar em diferentes máquinas, estas partições armazenam uma fila de mensagens, tendo cada uma delas um número identificador imutável que segue a ordem da fila, um consumidor dessa fila de mensagens tem a possibilidade de ler qualquer mensagem que esteja na fila através o seu identificador, um consumidor também pode consumir mensagens de diversas partições como mostra na figura \ref{fig:kafkatopicos}. As mensagens que chegam ao Kafka ficam armazenadas por um período de tempo configurável, não possuindo algo que informe se a mensagem foi lida ou não, apenas mantém pelo período estabelecido, caso o período seja menor ao período em que será feita a leitura pelo consumidor, essa mensagem será perdida
 
 \begin{figure}[!h]
 \caption{\label{fig:kafkatopicos} Partições do Kafka}
@@ -120,5 +112,93 @@ Possui como características separação dos conceitos de leitura e escrita, for
 \legend{Fonte: \citeauthor{datomic}, \citeyear{datomic}} 
 \end{figure}
 
+\section{Arquitetura do Sistema}
+Durante o desenvolvimento do projeto buscou-se utilizar do padrão de micro serviços, com cada um deles encapsulado dentro de um contêiner com responsabilidade única, sendo utilizado um arquivo Docker Compose, mostrado na figura \ref{fig:dockercompose} para sua criação e o Docker Swarm para realizar todo o gerenciamento de carga da aplicação, o \textit{cluster} de contêineres é apresentado na figura \ref{fig:dockerps}, a escolha de se utilizar micro serviços conteinerizados se deu pela grande facilidade com que se pode criar, remover e escalar toda a aplicação, por exemplo se em algum momento um serviço em específico está sendo mais utilizado que os demais, automaticamente podem ser criadas réplicas deste serviço para atender as demandas.
 
+\begin{figure}[!h]
+\caption{\label{fig:dockercompose} Arquivo Docker Compose}
+\begin{center}
+\includegraphics[scale=0.5]{dockercompose}
+\end{center}
+\legend{Fonte: SOUZA} 
+\end{figure}
 
+\begin{figure}[!h]
+\caption{\label{fig:dockerps} \textit{Cluster} de contêineres}
+\begin{center}
+\includegraphics[scale=0.2]{dockerps}
+\end{center}
+\legend{Fonte: SOUZA} 
+\end{figure}
+
+Utilizou-se também do padrão CQRS para a execução das operações de escrita e leitura, utilizado por se tratar de um sistema ao qual as regras tendem a aumentar sua complexidade, e assim estando no padrão CQRS a aplicação já estará pronta para suportar estas demandas. Para conhecimento da arquitetura por completa será analisado o fluxo de dados seguido pelo dado objeto a seguir, o qual é criado assim que um carro é ligado e faz uma requisição para se conectar a infraestrutura (iniciar uma nova sessão) no serviço de \textit{Command}:
+\begin{lstlisting}
+{
+	"hd-id": "abcd1234",
+	"model": "zyz",
+	"brand": "123"
+}
+\end{lstlisting}
+
+\subsection{\textit{Command}}
+Operações de leitura, escrita e remoção passam por este serviço, escrito em Clojure devido ao seu alto paralelismo, que validará com as regras de negócio as informações recebidas e se passarem por esta fase, as informações serão inseridas em forma de texto, na fila de mensagens do Kafka para serem inseridos no banco de dados juntamente com um identificador da sessão criada para este carro, o dado enviado ao Kafka é apresentado a baixo:
+\begin{lstlisting}
+{
+	"command": "create_session",
+	"session-id": "{uuid}",
+	"hd-id": "abcd1234",
+	"model": "zyz",
+	"brand": "123"
+}
+\end{lstlisting}
+
+\subsection{\textit{Worker}}
+Após a inserção da mensagem na fila do Kafka um outro serviço chamado de \textit{Worker} que monitora se existem mensagens a serem lidas no Kafka, irá ler esta mensagem e salvá-la banco de dados, neste caso por ser uma informação apenas de sessão será salvo apenas no MongoDB, mas para o caso de um novo cadastro de veículo ou alteração do mesmo, este serviço salvaria primeiramente no Datomic, o qual armazena dados históricos e posteriormente no MongoDB, o qual terá a informação imediata sobre o veículo, juntamente com esta informação de sessão o serviço de \textit{tracking} estará atualizando dados referentes a localização do veículo, como pode ser visto no objeto persistido no MongoDB apresentado a seguir: 
+\begin{lstlisting}
+{
+	"session-id": "{uuid}",
+	"hd-id": "abcd1234",
+	"model": "zyz",
+	"brand": "123",
+	"location": {"x": 46.121, "y": 12.0213},
+	"gas-lvl": 74
+}
+\end{lstlisting}
+
+Esta estratégia de se salvar em dois bancos de dados faz com que Datomic fique armazenados todas as informações relevantes para se manter um histórico do veículo, mantendo a veracidade de dados sobre a entidade, já no MongoDB se tem os dados em tempo real e como pôde ser visto a grande vantagem do banco não relacional está na rapidez com que esse dado poderá ser buscado, pois em um banco relacional provavelmente se teria uma tabela para localizações e uma para dados do veículo, necessitando de funções de agregação de dados para se ter o objeto completo, desta forma, no banco não relacional todas as informações já estão agrupadas, se ganhando muito em velocidade.
+
+\subsection{\textit{Tracking}}
+O serviço de \textit{tracking} é o responsável por receber informações do veículo, como posição e velocidade, dentre algumas informações sobre o estado do carro, e colocá-las na fila de mensagens do Kafka, para serem inseridos pelo serviço \textit{worker} no MongoDB, juntamente com as informações de sessão do carro. 
+
+\subsection{\textit{Query}}
+Finalizado o processo de inserção de dados, o processo de leitura se dá pelo serviço de \textit{query}, o qual recebe a requisição do usuário e busca dados diretamente no MongoDB retornando assim as informações requisitadas, consultas realizadas no Datomic estão relacionadas com as análise de dados do Big Data, pois é lá que se formará a grande massa de dados possíveis de serem analisadas com o decorrer do tempo.
+
+\subsection{Interface do Usuário}
+Esta vem a ser o dispositivo implantado no carro que tem a função de se ligar aos sensores do carro, a fim de mandá-las para a infraestrutura, juntamente com a localização instantânea do veículo. Esta interface não é contemplada pelo projeto, mas é essencial para o seu funcionamento prático.
+
+\subsection{Visão Geral}
+De forma geral se tem um fluxo de dados para inserção como visto na figura \ref{fig:insert} e o fluxo de dados para leituras apresentadas na figura \ref{fig:select}, a estrutura geral de toda arquitetura é representada na figura \ref{fig:estruturageral}.
+
+\begin{figure}[!h]
+\caption{\label{fig:insert} Fluxo de dados para inserção}
+\begin{center}
+\includegraphics[scale=0.5]{insert}
+\end{center}
+\legend{Fonte: SOUZA} 
+\end{figure}
+
+\begin{figure}[!h]
+\caption{\label{fig:select} Fluxo de dados para leitura}
+\begin{center}
+\includegraphics[scale=0.5]{select}
+\end{center}
+\legend{Fonte: COELHO} 
+\end{figure}
+
+\begin{figure}[!h]
+\caption{\label{fig:estruturageral} Estrutura Geral da Arquitetura}
+\begin{center}
+\includegraphics[scale=0.5]{estruturageral}
+\end{center}
+\legend{Fonte: COELHO} 
+\end{figure}
