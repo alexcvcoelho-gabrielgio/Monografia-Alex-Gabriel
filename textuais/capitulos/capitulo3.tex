@@ -113,14 +113,14 @@ Possui como características separação dos conceitos de leitura e escrita, for
 \end{figure}
 
 \section{Arquitetura do Sistema}
-Durante o desenvolvimento do projeto buscou-se utilizar do padrão de micro serviços, com cada um deles encapsulado dentro de um contêiner com responsabilidade única, sendo utilizado um arquivo Docker Compose, mostrado na figura \ref{fig:dockercompose} para sua criação e o Docker Swarm para realizar todo o gerenciamento de carga da aplicação, o \textit{cluster} de contêineres é apresentado na figura \ref{fig:dockerps}, a escolha de se utilizar micro serviços conteinerizados se deu pela grande facilidade com que se pode criar, remover e escalar toda a aplicação, por exemplo se em algum momento um serviço em específico está sendo mais utilizado que os demais, automaticamente podem ser criadas réplicas deste serviço para atender as demandas.
+Durante o desenvolvimento do projeto buscou-se utilizar do padrão de micro serviços, com cada um deles encapsulado dentro de um contêiner com responsabilidade única, sendo utilizado um arquivo Docker Compose, mostrado na figura \ref{fig:dockercompose} para sua criação e o Docker Swarm para realizar todo o gerenciamento de carga da aplicação, o \textit{cluster} de contêineres é apresentado na figura \ref{fig:dockerps}, a escolha de se utilizar micro serviços conteinerizados se deu pela grande facilidade com que se pode criar, remover e escalar toda a aplicação, por exemplo se em algum momento um serviço em específico está sendo mais utilizado que os demais, automaticamente podem ser criadas réplicas deste serviço para atender as demandas.~\cite{dockerswarm}
 
 \begin{figure}[!h]
 \caption{\label{fig:dockercompose} Arquivo Docker Compose}
 \begin{center}
 \includegraphics[scale=0.5]{dockercompose}
 \end{center}
-\legend{Fonte: SOUZA} 
+%\legend{Fonte: SOUZA} 
 \end{figure}
 
 \begin{figure}[!h]
@@ -128,7 +128,7 @@ Durante o desenvolvimento do projeto buscou-se utilizar do padrão de micro serv
 \begin{center}
 \includegraphics[scale=0.2]{dockerps}
 \end{center}
-\legend{Fonte: SOUZA} 
+%\legend{Fonte: SOUZA} 
 \end{figure}
 
 Utilizou-se também do padrão CQRS para a execução das operações de escrita e leitura, utilizado por se tratar de um sistema ao qual as regras tendem a aumentar sua complexidade, e assim estando no padrão CQRS a aplicação já estará pronta para suportar estas demandas. Para conhecimento da arquitetura por completa será analisado o fluxo de dados seguido pelo dado objeto a seguir, o qual é criado assim que um carro é ligado e faz uma requisição para se conectar a infraestrutura (iniciar uma nova sessão) no serviço de \textit{Command}:
@@ -184,7 +184,7 @@ De forma geral se tem um fluxo de dados para inserção como visto na figura \re
 \begin{center}
 \includegraphics[scale=0.5]{insert}
 \end{center}
-\legend{Fonte: SOUZA} 
+%\legend{Fonte: SOUZA} 
 \end{figure}
 
 \begin{figure}[!h]
@@ -192,7 +192,7 @@ De forma geral se tem um fluxo de dados para inserção como visto na figura \re
 \begin{center}
 \includegraphics[scale=0.5]{select}
 \end{center}
-\legend{Fonte: COELHO} 
+%\legend{Fonte: COELHO} 
 \end{figure}
 
 \begin{figure}[!h]
@@ -200,5 +200,5 @@ De forma geral se tem um fluxo de dados para inserção como visto na figura \re
 \begin{center}
 \includegraphics[scale=0.5]{estruturageral}
 \end{center}
-\legend{Fonte: COELHO} 
+%\legend{Fonte: COELHO} 
 \end{figure}
