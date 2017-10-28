@@ -40,7 +40,8 @@
 	section=TITLE,		% títulos de seções convertidos em letras maiúsculas
 	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
 	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
-	sumario=abnt-6027-2012 % opção de sumário
+	%sumario=abnt-6027-2012, % opção de sumário
+	sumario=tradicional,
 	% -- opções do pacote babel --
 	english,			% idioma adicional para hifenização
 	french,				% idioma adicional para hifenização
@@ -65,14 +66,11 @@
 \usepackage{lipsum}				% Geração de dummy text
 \usepackage[alf]{abntex2cite}	% Citações padrão ABNT
 %\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
-\usepackage{listings, xcolor}
+\usepackage{listings}
 
 \lstset{
-    string=[s]{"}{"},
-    stringstyle=\color{blue},
-    comment=[l]{:},
-    commentstyle=\color{black},
-}
+basicstyle=\fontfamily{pcr}\selectfont\footnotesize,
+breaklines=true}
 % ---
 
 % ---
@@ -329,7 +327,7 @@ exigência parcial para a obtenção do diploma de graduação em Engenharia da 
 \include{textuais/capitulos/capitulo1}
 \include{textuais/capitulos/capitulo2}
 \include{textuais/capitulos/capitulo3}
-%\include{textuais/capitulos/capitulo4}
+\include{textuais/capitulos/capitulo4}
 
 
 % ---
@@ -383,26 +381,9 @@ exigência parcial para a obtenção do diploma de graduação em Engenharia da 
 % ---
 % Inicia os apêndices
 % ---
-%\begin{apendicesenv}
 
-% Imprime uma página indicando o início dos apêndices
-%\partapendices
-
-% ----------------------------------------------------------
-%\chapter{Quisque libero justo}
-% ----------------------------------------------------------
-
-%\lipsum[50]
-
-% ----------------------------------------------------------
-%chapter{Nullam elementum urna vel imperdiet sodales elit ipsum pharetra ligula
-%ac pretium ante justo a nulla curabitur tristique arcu eu metus}
-% ----------------------------------------------------------
-%\lipsum[55-57]
-
-%\end{apendicesenv}
 % ---
-
+\include{pos-textuais/apendices}
 
 % ----------------------------------------------------------
 % Anexos

@@ -1,0 +1,78 @@
+\begin{apendicesenv}
+
+% Imprime uma página indicando o início dos apêndices
+%\partapendices
+
+% ----------------------------------------------------------
+\chapter{\textit{Session Command}}
+
+\begin{lstlisting}
+(ns session-command.kafka.core
+  (:require [kinsky.client :as client]
+            [session-command.config :refer [env]]
+            [clojure.core.async :as a]
+            [jkkramer.verily :as v]))
+
+(def s-validate (v/validations->fn [[:required [:brand :model :hd-id :command :uuid]]]))
+(def t-validate (v/validations->fn [[:required [:session-id :gas-lvl :lat :long :vel]]]))
+(def w-validate (v/validations->fn [[:required [:session-id :action]]]))
+
+(mount.core/defstate conn
+                     :start (client/producer {:bootstrap.servers (env :kafka)}
+                                             (client/keyword-serializer)
+                                             (client/edn-serializer))
+                     :stop (client/close! conn))
+
+(defn push-session [session]
+  (if (s-validate session)
+    (client/send! conn "session" :session session)
+    {:error "Value can be null"}))
+
+(defn push-warn [warn]
+  (if (w-validate warn)
+    (client/send! conn "warn-warn" :session warn)
+    {:error "Value cannot be null"}))
+
+(defn push-track [track]
+  (if (t-validate track)
+    (client/send! conn "track" :track track)
+    {:error "value cannot be null"}))
+\end{lstlisting}
+
+% ----------------------------------------------------------
+\chapter{\textit{Session Worker}}
+\begin{lstlisting}
+(ns session-worker.core
+  (:gen-class)
+  (:require [ext.kafka :as kf]
+            [clojure.core.async :refer [go thread chan <!!]]
+            [ext.router :as rt]
+            [clojure.data.json :as json]
+            [clojure.tools.logging :as log]))
+
+(defn pull [item]
+  (println (:command item) " " (:uuid item))
+  (case (:command item)
+    "create_session" (rt/save-session item)
+    "warn" (rt/save-warn item)
+    nil))
+
+(defn loop-through [c]
+  (loop [count 0]
+    (try
+      (println "LOOP" count)
+      (kf/pop-session-async c)
+      (doseq [i (<!! c)]
+        (pull i))
+      (catch Exception e
+        (-> e print)))
+    (recur (inc count))))
+
+(defn -main [& args]
+  (mount.core/start)
+  (let [c (chan)]
+    (loop-through c)))
+\end{lstlisting}
+
+
+\end{apendicesenv}

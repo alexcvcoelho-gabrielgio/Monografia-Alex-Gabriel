@@ -1,5 +1,10 @@
-\chapter{Análise de Resultados}
+\chapter{Resultados}
 \label{chap:analiseresultados}
+Montada a arquitetura especificada na seção \ref{chap:arquitetura}, iniciou-se o processo de inserção de dados nesta estrutura através do conceito de \textit{Mockup}, o qual simula funcionalidades do sistema para que estas possam ser testadas de forma independente, sendo assim, dentro desta arquitetura os objetos \textit{mock} foram os carros e unidades de emergência, os quais tiveram seu comportamento simulado via \textit{software}, a fim de validar o armazenamento e fluxo de dados na arquitetura.
+
+O \textit{Mockup} realizou-se por meio de um micro serviço escrito em Clojure, o qual cria uma quantidade de conexões pré-estabelecidas com o micro serviço \textit{Session Command} e envia dados fictícios sobre localização, nível de combustível e alertas em cada conexão criada, esses dados passam a serem inseridos na fila do Kafka após terem as informações validadas pelo \textit{Session Command}, desta forma o micro serviço \textit{Session Worker} retira da fila e insere nos bancos de dados Datomic ou MongoDB.
+
+
 \section{Testes de Sistema}
 \label{sec:testessistema}
 Apresentar os testes utilizados para verificar o funcionamento do sistema, métodos utilizados e resultados esperados.
@@ -7,6 +12,11 @@ Apresentar os testes utilizados para verificar o funcionamento do sistema, méto
 \section{Testes de Aceitação}
 \label{sec:testesaceitacao}
 Análise dos resultados obtidos e analisar o benefício do usuário utilizador do sistema, analisar se seria aprovado pelo mesmo e pelos agentes sociais.
+
+\section{Dificuldades encontradas}
+Dentre as principais dificuldades durante a montagem da arquitetura especificada, está a dificuldade em se trabalhar com Clojure, apesar de todas as características e benefícios já mencionadas anteriormente, por ser uma linguagem recém lançada no mercado e não possuir uma comunidade ativa para a resolução de problemas encontrados com a linguagem, encontrar suporte e documentação para o desenvolvimento se tornou uma tarefa difícil, se fazendo necessário a análise puramente de \textit{logs}, que por muitas vezes não eram específicos da linguagem, mas sim da JVM, o que tornou mais difícil a obtenção de soluções, embora torne o aprendizado mais rico, este tipo de análise demanda maior tempo.
+
+
 
 \section{Discussão de Resultados}
 \label{sec:discussãoresultados}
