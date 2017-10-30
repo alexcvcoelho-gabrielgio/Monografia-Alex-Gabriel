@@ -12,6 +12,8 @@ Tendo os dados armazenados, para o processo de leitura destes dados criou-se o m
 
 Todos os micro serviços  utilizados dentro da arquitetura apresentam-se encapsulados dentro de contêineres, estes porém, possuem a base inicial vinda de uma imagem Docker oficial, no caso dos micro serviços utilizou-se a imagem Java com \textit{Java SE Runtime Environment} (JRE) em sua versão 8, sendo assim, as alterações e configurações para o ambiente desejado se fizeram através do Dockerfile, que ao ser construído gera uma nova imagem com as alterações nele contidos, e para criação do contêiner basta especificar que a imagem a ser usada será esta nova imagem.
 
+
+
 \section{Testes de Sistema}
 \label{sec:testessistema}
 Montada a arquitetura especificada na seção \ref{chap:arquitetura}, iniciou-se o processo de inserção de dados nesta estrutura através do conceito de \textit{Mockup}, o qual simula funcionalidades do sistema para que estas possam ser testadas de forma independente, sendo assim, dentro desta arquitetura os objetos \textit{mock} foram os carros e unidades de emergência, os quais tiveram seu comportamento simulado via \textit{software}, a fim de validar o armazenamento e fluxo de dados na arquitetura.
