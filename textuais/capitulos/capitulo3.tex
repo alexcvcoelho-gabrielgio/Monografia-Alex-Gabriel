@@ -112,6 +112,9 @@ Possui como características separação dos conceitos de leitura e escrita, for
 \legend{Fonte: \citeauthor{datomic}, \citeyear{datomic}} 
 \end{figure}
 
+\section{Locust}
+Locust é uma ferramenta \textit{open source} desenvolvida em Python que visa realizar testes de carga e \textit{stress} simulando conexões de usuários reais, para estes testes podem ser usados máquinas \textit{slaves} tendo um teste de forma distribuída, a configuração é feita através de um \textit{script} em Python também, onde são definidas as URLs a serem testadas, e por meio de uma interface gráfica WEB é possível configurar a quantidade de usuários a serem simulados, quantidade de requisições a serem feitas, além de apresentar gráficos estatísticos sobre os testes.~\cite{locust}
+
 \section{Arquitetura do Sistema}
 Durante o desenvolvimento do projeto buscou-se utilizar do padrão de micro serviços, com cada um deles encapsulado dentro de um contêiner com responsabilidade única, sendo utilizado um arquivo Docker Compose para sua criação, e o Docker Swarm para realizar todo o gerenciamento de carga da aplicação. A escolha de se utilizar micro serviços conteinerizados se deu pela grande facilidade com que se pode criar, remover e escalar toda a aplicação, por exemplo, se em algum momento um serviço em específico está sendo mais utilizado que os demais, automaticamente podem ser criadas réplicas deste serviço para atender as demandas.~\cite{dockerswarm}
 
