@@ -62,7 +62,7 @@
   	\end{figure}
   	
   	%Coordenadoria de ... fonte 16 - feita uma pequena gambiarra pois por padrão este tamanho não é disponivel
-  	{\fontsize{16}{20}\MakeUppercase\ABNTEXchapterfont\textbf{COORDENADORIA DE ENGENHARIA DA COMPUTAÇÃO}}
+  	{\fontsize{16}{20}\MakeUppercase\ABNTEXchapterfont\textbf{COORDENADORIA DE ENGENHARIA DE COMPUTAÇÃO}}
 
     %espaço
     \vfill
@@ -132,6 +132,24 @@
 %Numeração por seções
 \setlength{\cftfigurenumwidth}{3em}
 \setlength{\cfttablenumwidth}{3em}
+
+% Criação de quadros
+% Novo list of (listings) para QUADROS
+
+\newcommand{\quadroname}{Quadro}
+\newcommand{\listofquadrosname}{Lista de quadros}
+
+\newfloat[chapter]{quadro}{loq}{\quadroname}
+\newlistof{listofquadros}{loq}{\listofquadrosname}
+\newlistentry{quadro}{loq}{0}
+
+% configurações para atender às regras da ABNT
+\renewcommand{\cftquadroname}{\quadroname\space} 
+\renewcommand*{\cftquadroaftersnum}{\hfill--\hfill}
+
+% Configuração de posicionamento padrão:
+\setfloatlocations{quadro}{hbtp}
+
 % ---
 % FIM DAS CUSTOMIZACOES PARA A UNIVERSIDADE XXX
 % ---

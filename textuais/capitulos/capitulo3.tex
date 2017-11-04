@@ -14,7 +14,7 @@ O \textit{Command Query Responsibility Segregation} (CQRS) é um padrão de dese
 \begin{figure}[!h]
 \caption{\label{fig:cqrs} Arquitetura CQRS}
 \begin{center}
-\includegraphics[scale=0.4]{cqrs}
+\includegraphics[scale=0.5]{cqrs}
 \end{center}
 \legend{Fonte: \citeauthor{cqrs}, \citeyear{cqrs}} 
 \end{figure}
@@ -30,7 +30,7 @@ Desta forma se tem uma grande flexibilidade para trabalhar com as aplicações, 
 \begin{figure}[!h]
 \caption{\label{fig:arqdocker} Arquitetura Docker}
 \begin{center}
-\includegraphics[scale=0.3]{arqdocker}
+\includegraphics[scale=0.4]{arqdocker}
 \end{center}
 \legend{Fonte: \citeauthor{docker}, \citeyear{docker}} 
 \end{figure}
@@ -79,9 +79,9 @@ Seu funcionamento se dá através de partições sobre tópicos diferentes (como
 \begin{figure}[!h]
 \caption{\label{fig:kafkatopicos} Partições do Kafka}
 \begin{center}
-\includegraphics[scale=0.7]{kafkatopicos}
+\includegraphics[scale=0.5]{kafkatopicos}
 \end{center}
-\legend{Fonte: \citeauthor{kafka}, \citeyear{kafka}} 
+\legend{Fonte: \citeauthor{kafka}, \citeyear{kafka} (Adaptado)} 
 \end{figure}
 
 Além da organização das mensagens dentro de partições, se tem ainda a organização de partições dentro de \textit{brokers}, onde se tem partições  chamadas de líderes e réplicas, no processo de produção de mensagens como apresentado na figura \ref{fig:kafkaproducao} o produtor escreve na partição líder, esta então gera cópia nas partições réplicas que podem estar em outros \textit{brokers} e em outras máquinas, desta forma se mantêm a consistência das mensagens e um alto nível de paralelismo, pois no processo de leitura o consumidor faz uma requisição para ler e a partição que está disponível retorna a mensagem para ele.~\cite{kafka}
@@ -89,9 +89,9 @@ Além da organização das mensagens dentro de partições, se tem ainda a organ
 \begin{figure}[!h]
 \caption{\label{fig:kafkaproducao} Processo de escrita do Kafka}
 \begin{center}
-\includegraphics[scale=0.5]{kafkaproducao}
+\includegraphics[scale=0.6]{kafkaproducao}
 \end{center}
-\legend{Fonte: \citeauthor{kafka}, \citeyear{kafka}} 
+\legend{Fonte: \citeauthor{kafka}, \citeyear{kafka} (Adaptado)} 
 \end{figure}
 
 \section{MongoDB}
@@ -102,15 +102,21 @@ Dentre as funcionalidades dele se destacam a indexação através de texto o que
 \section{Datomic}
 Assim como o MongoDB ele é um banco de dados não relacional, mas com um conceito diferente, adaptado para as novas demandas de serviços em nuvem com arquitetura \textit{Software as a Service} (SaaS), Datomic é um banco de dados orientado a fatos, com o grande diferencial de que dados nele persistidos se tornam imutáveis, isto não significa que não se pode alterar dados, mas o que acontece é um versionamento dos dados, desta forma é possível se ter um histórico do objeto persistido com todas as alterações já realizadas sendo a última versão o dado de maior veracidade.  
 
-Possui como características separação dos conceitos de leitura e escrita, forte garantia transacional na escrita, noções de imutabilidade expressas por bases de dados estritamente incrementais, utiliza para as consultas de dados a linguagem Datalog, como é mostrado um exemplo da linguagem na figura \ref{fig:datalog} que é estruturada baseada em lógica permitindo consultas complexas incluindo \textit{joins} inferidos.~\cite{datomic} 
+Possui como características separação dos conceitos de leitura e escrita, forte garantia transacional na escrita, noções de imutabilidade expressas por bases de dados estritamente incrementais, utiliza para as consultas de dados a linguagem Datalog, como é mostrado um exemplo da linguagem no quadro \ref{qdr:datalog} que é estruturada baseada em lógica permitindo consultas complexas incluindo \textit{joins} inferidos.~\cite{datomic} 
 
-\begin{figure}[!h]
-\caption{\label{fig:datalog} Exemplo da linguagem Datalog}
-\begin{center}
-\includegraphics[scale=0.6]{datalog}
-\end{center}
+\begin{quadro}
+\caption{\label{qdr:datalog} Exemplo da linguagem Datalog}
+\begin{lstlisting}
+	[:find ?cliente ?produto
+	 :where [?cliente :enderecoEntrega ?endereco]
+	        [?endereco :cep ?cep]
+	        [?produto :produto/peso ?peso]
+	        [?produto :product/preco ?preco]
+	        [(Entrega/estimativa ?cep ?peso) ?custoEntrega]
+	        [(<= ?preco ?custoEntrega)]]
+\end{lstlisting}
 \legend{Fonte: \citeauthor{datomic}, \citeyear{datomic}} 
-\end{figure}
+\end{quadro}
 
 \section{Locust}
 Locust é uma ferramenta \textit{open source} desenvolvida em Python que visa realizar testes de carga e \textit{stress} simulando conexões de usuários reais, para estes testes podem ser usados máquinas \textit{slaves} tendo um teste de forma distribuída, a configuração é feita através de um \textit{script} em Python também, onde são definidas as URLs a serem testadas, e por meio de uma interface gráfica WEB é possível configurar a quantidade de usuários a serem simulados, quantidade de requisições a serem feitas, além de apresentar gráficos estatísticos sobre os testes.~\cite{locust}
@@ -119,6 +125,9 @@ Locust é uma ferramenta \textit{open source} desenvolvida em Python que visa re
 Durante o desenvolvimento do projeto buscou-se utilizar do padrão de micro serviços, com cada um deles encapsulado dentro de um contêiner com responsabilidade única, sendo utilizado um arquivo Docker Compose para sua criação, e o Docker Swarm para realizar todo o gerenciamento de carga da aplicação. A escolha de se utilizar micro serviços conteinerizados se deu pela grande facilidade com que se pode criar, remover e escalar toda a aplicação, por exemplo, se em algum momento um serviço em específico está sendo mais utilizado que os demais, automaticamente podem ser criadas réplicas deste serviço para atender as demandas.~\cite{dockerswarm}
 
 Utilizou-se também do padrão CQRS para a execução das operações de escrita e leitura, utilizado por se tratar de um sistema ao qual as regras tendem a aumentar sua complexidade, e assim estando no padrão CQRS a aplicação já estará pronta para suportar estas demandas. Para conhecimento da arquitetura por completa será analisado o fluxo de dados seguido pelo dado objeto a seguir, o qual é criado assim que um carro é ligado e faz uma requisição para se conectar a infraestrutura (iniciar uma nova sessão) no serviço de \textit{Command}:
+
+\begin{quadro}
+\caption{\label{qdr:initial}Caption do quadro}
 \begin{lstlisting}
 {
 	"hd-id": "abcd1234",
@@ -126,9 +135,13 @@ Utilizou-se também do padrão CQRS para a execução das operações de escrita
 	"brand": "123"
 }
 \end{lstlisting}
+\end{quadro}
 
 \subsection{\textit{Command}}
 Operações de leitura, escrita e remoção passam por este serviço, escrito em Clojure devido ao seu alto paralelismo, que validará com as regras de negócio as informações recebidas e se passarem por esta fase, as informações serão inseridas em forma de texto na fila de mensagens do Kafka para serem inseridos no banco de dados juntamente com um identificador da sessão criada para este carro, o dado enviado ao Kafka é apresentado a baixo:
+
+\begin{quadro}
+\caption{\label{qdr:command}Caption do quadro}
 \begin{lstlisting}
 {
 	"command": "create_session",
@@ -138,9 +151,13 @@ Operações de leitura, escrita e remoção passam por este serviço, escrito em
 	"brand": "123"
 }
 \end{lstlisting}
+\end{quadro}
 
 \subsection{\textit{Worker}}
 Após a inserção da mensagem na fila do Kafka um outro serviço chamado de \textit{Worker} que monitora se existem mensagens a serem lidas no Kafka, irá ler esta mensagem e salvá-la banco de dados, neste caso por ser uma informação apenas de sessão será salvo apenas no MongoDB, mas para o caso de um novo cadastro de veículo ou alteração do mesmo, este serviço salvaria primeiramente no Datomic, o qual armazena dados históricos e posteriormente no MongoDB, o qual terá a informação imediata sobre o veículo, juntamente com esta informação de sessão o serviço de \textit{tracking} estará atualizando dados referentes a localização do veículo, como pode ser visto no objeto persistido no MongoDB apresentado a seguir: 
+
+\begin{quadro}
+\caption{\label{qdr:worker}Caption do quadro}
 \begin{lstlisting}
 {
 	"session-id": "{uuid}",
@@ -151,6 +168,7 @@ Após a inserção da mensagem na fila do Kafka um outro serviço chamado de \te
 	"gas-lvl": 74
 }
 \end{lstlisting}
+\end{quadro}
 
 Esta estratégia de se salvar em dois bancos de dados faz com que Datomic fique armazenados todas as informações relevantes para se manter um histórico do veículo, mantendo a veracidade de dados sobre a entidade, já no MongoDB se tem os dados em tempo real e como pôde ser visto a grande vantagem do banco não relacional está na rapidez com que esse dado poderá ser buscado, pois em um banco relacional provavelmente se teria uma tabela para localizações e uma para dados do veículo, necessitando de funções de agregação de dados para se ter o objeto completo, desta forma, no banco não relacional todas as informações já estão agrupadas, se ganhando muito em velocidade.
 

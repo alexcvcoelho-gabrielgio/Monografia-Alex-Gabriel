@@ -68,9 +68,12 @@
 %\usepackage[brazilian,hyperpageref]{backref}	 % Paginas com as citações na bibl
 \usepackage{listings}
 
+% Estilo do Listing
+% frame = (none|leftline|topline|bottomline|lines|single|shadowbox)
 \lstset{
 basicstyle=\fontfamily{pcr}\selectfont\footnotesize,
-breaklines=true}
+breaklines=true, 
+frame=single}
 % ---
 
 % ---
@@ -114,11 +117,12 @@ breaklines=true}
 % O preambulo deve conter o tipo do trabalho, o objetivo, 
 % o nome da instituição e a área de concentração 
 \preambulo{Trabalho de conclusão de curso apresentado à Faculdade de Engenharia de Sorocaba como
-exigência parcial para a obtenção do diploma de graduação em Engenharia da Computação.}
+exigência parcial para a obtenção do diploma de graduação em Engenharia de Computação.}
 % ---
 
 \counterwithin{figure}{chapter}
 \counterwithin{table}{chapter}
+\counterwithin{quadro}{chapter}
 
 % ---
 % Configurações de aparência do PDF final
@@ -267,6 +271,12 @@ exigência parcial para a obtenção do diploma de graduação em Engenharia da 
 % inserir lista de ilustrações
 % ---
 \include{pre-textuais/lista-ilustracoes}
+% ---
+
+% ---
+% Lista de Quadros
+% ---
+%\include{pre-textuais/lista-quadros}
 % ---
 
 % ---
